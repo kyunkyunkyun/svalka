@@ -1,7 +1,9 @@
-//The bigger ones lag like hell if there is more than one on a z-level, so cost 2 for them
 /datum/map_template/ruin/space
 	prefix = "_maps/map_files/RandomRuins/SpaceRuins/"
-	cost = 1 // Varies from 0 to 10. Make sure you don't make it higher than 10 and use 0 only with the always_place
+	cost = 1 // round() of your ruin's square divided by 1000 (tiles basically). Default is 1. 0 is used for ruins with `always_place = TRUE`
+	// cost = max(round(square, 1000)/1000, 1)
+	// 100x100 ruin costs 10, 70x70 ruin costs 5, 50x50 costs 3 etc
+	placement_weight = 1 // values from 1 to 3. 1 for minor loot, 2 for mediocre and 3 for highest-tier. Default is 1
 	ci_exclude = /datum/map_template/ruin/space
 
 /datum/map_template/ruin/space/zoo
@@ -12,7 +14,7 @@
 		zoos to working order with the breeding stock kept in these 100% \
 		secure and unbreachable storage facilities. At no point has anything \
 		escaped. That's our story, and we're sticking to it."
-	cost = 3 // temp gun, double oxy emergency tank, stimpack
+	cost = 2
 
 /datum/map_template/ruin/space/asteroid1
 	id = "asteroid1"
@@ -48,7 +50,6 @@
 	suffix = "asteroid5.dmm"
 	name = "Asteroid 5"
 	description = "Oh my god, another giant rock!"
-	cost = 2 // pretty huge, hivelord spawner
 
 /datum/map_template/ruin/space/deep_storage
 	id = "deep-storage"
@@ -59,7 +60,8 @@
 		a giant unused asteroid. Then make it self sufficient, mask any \
 		evidence of construction, hook it covertly into the \
 		telecommunications network and hope for the best."
-	cost = 10 // dvorak+mo19 experience + mini boss. Big one
+	cost = 6
+	placement_weight = 3 // dvorak+mo19 experience + mini boss
 	allow_duplicates = FALSE // this shouldn't be spawning more than once anymore
 
 /datum/map_template/ruin/space/derelict1
@@ -69,6 +71,7 @@
 	description = "Nothing to see here citizen, move along, certainly no \
 		xeno outbreaks on this piece of station debris. That purple stuff? \
 		It's uh... station nectar. It's a top secret research installation."
+	cost = 2
 
 /datum/map_template/ruin/space/derelict2
 	id = "derelict2"
@@ -77,6 +80,7 @@
 	description = "Oh this is the night\n\
 		It's a beautiful night\n\
 		And we call it bella notte"
+	cost = 2
 
 /datum/map_template/ruin/space/derelict3
 	id = "derelict3"
@@ -84,7 +88,8 @@
 	name = "Derelict 3"
 	description = "These hulks were once part of a larger structure, where \
 		the three great \[REDACTED\] were forged."
-	cost = 3 // A space dragon!
+	cost = 2
+	placement_weight = 2 // A space dragon!
 	allow_duplicates = FALSE
 
 /datum/map_template/ruin/space/derelict4
@@ -95,6 +100,7 @@
 		there is no current investigation into a crashed ferry, and we \
 		will not let Internal Affairs trample over high security information \
 		in the name of this baseless witchhunt."
+	cost = 2
 
 /datum/map_template/ruin/space/derelict5
 	id = "derelict5"
@@ -103,7 +109,7 @@
 	description = "The plan is, we put a whole bunch of crates full of \
 		treasure in this disused warehouse, launch it into space, and then \
 		ignore it. Forever."
-	cost = 2 // toolbox, hivelords
+	cost = 2
 
 /datum/map_template/ruin/space/listeningpost
 	id = "listeningpost"
@@ -111,7 +117,7 @@
 	name = "Syndie Listening Post"
 	description = "What happens to Nuclear Operatives that fail in their mission? \
 		Certainly not assignment to a backwater listening post..."
-	cost = 3 // toolbox, 150kJ cells, lots of healing, syndie corpse, telecomms, red soap
+	cost = 2
 
 /datum/map_template/ruin/space/empty_shell
 	id = "empty-shell"
@@ -126,14 +132,12 @@
 	name = "Authorship"
 	description = "Just somewhere quiet, where I can focus on my work with \
 		no interruptions."
-	cost = 2 // tarot card, medibot
 
 /datum/map_template/ruin/space/mech_transport
 	id = "mech-transport"
 	suffix = "mechtransport.dmm"
 	name = "Cybersun Exosuit Factory Ship"
 	description = "A crashed mobile mech factory under security lockdown."
-	cost = 2 // mechcore, pirates, couple of crates
 	allow_duplicates = FALSE
 
 /datum/map_template/ruin/space/onehalf
@@ -144,7 +148,6 @@
 		gutted asteroids, we suspect that a mining ship using a restricted \
 		engine is somewhere in the area. We'd like to request a patrol vessel \
 		to investigate."
-	cost = 3 // first aid kits, secret docs, mining mod
 
 /datum/map_template/ruin/space/spacebar
 	id = "spacebar"
@@ -163,7 +166,6 @@
 	name = "Unnamed Turreted Outpost"
 	description = "We'd ask them to stop blaring that ruskiepop music, but \
 		none of us are brave enough to go near those death turrets they have."
-	cost = 2 // military belt, camerabug, 30kJ cell
 
 /datum/map_template/ruin/space/way_home
 	id = "way-home"
@@ -186,21 +188,21 @@
 	suffix = "wizardcrash.dmm"
 	name = "Crashed Wizard Shuttle"
 	description = "A shuttle of the Wizard Federation, sent out to crush some wandless scum. Unfortunately, the pilot suffered a magic-related accident and the shuttle crashed into a nearby asteroid."
-	cost = 4 // blank tarot, random artefact
+	placement_weight = 2 // tarot card + random artefact
 
 /datum/map_template/ruin/space/abandonedtele
 	id = "abandonedtele"
 	suffix = "abandonedtele.dmm"
 	name = "Abandoned Teleporter"
 	description = "An old teleporter, seemingly part of what used to be a larger satellite."
-	cost = 2 // shortcut
 
 /datum/map_template/ruin/space/blowntcommsat
 	id = "blowntcommsat"
 	suffix = "blowntcommsat.dmm"
 	name = "Blown-out Telecommunications Satellite"
 	description = "The remains of an old telecommunications satellite once utilised by Nanotrasen. It lays derelict, with quite a few pieces missing."
-	cost = 7 // bloodmod, teleporter console, toolbox, 50u syringe, nvg. This is a chonky boy
+	cost = 2 // This is a chonky boy
+	placement_weight = 2 // bloodmod, teleporter console, toolbox, 50u syringe, nvg
 	allow_duplicates = FALSE // Absolutely huge, also has its own APC and the area isnt set to allow many
 
 /datum/map_template/ruin/space/malftcommsat
@@ -208,7 +210,8 @@
 	suffix = "telecomns_returns.dmm"
 	name = "D.V.O.R.A.K'S Telecommunications Satellite"
 	description = "Seems the telecomunication satellite that went dark 4 years ago finally re-appeared on scanners? Strange signals are coming from it."
-	cost = 10 // Huge. Large. In charge
+	cost = 8 // Huge. Large. In charge
+	placement_weight = 3 // In charge indeed
 	allow_duplicates = FALSE // One sadistic malfunctioning AI is enough. Also unique apcs.
 
 /datum/map_template/ruin/space/clownmime
@@ -216,7 +219,6 @@
 	suffix = "clownmime.dmm"
 	name = "Clown & Mime Mineral Deposits"
 	description = "A crash site of two opposing factions, both trying to complete mining trips for their own valuable minerals. While all the crew have long perished, the minerals are likely intact."
-	cost = 2 // Honk!
 
 /datum/map_template/ruin/space/dj
 	id = "dj"
@@ -229,7 +231,6 @@
 	suffix = "druglab.dmm"
 	name = "Drug Lab"
 	description = "An old abandoned \"Chemistry\" site, which has a strong aura of amphetamines around it."
-	cost = 2 // chem dispenser, pirate
 
 /datum/map_template/ruin/space/syndicatedruglab
 	id = "syndicatedruglab"
@@ -237,7 +238,6 @@
 	name = "Suspicious Station"
 	description = "A syndicate drug laboratory hidden on an asteroid. It is strangely well-protected."
 	allow_duplicates = FALSE
-	cost = 3 // soap, syndie corpse, chem dispenser, hydroponics, void puppies
 
 /datum/map_template/ruin/space/syndiedepot
 	id = "syndiedepot"
@@ -253,7 +253,6 @@
 	suffix = "ussp_tele.dmm"
 	name = "USSP Teleporter"
 	description = "An old, almost fully destroyed teleporter, seemingly part of what used to be a much larger structure."
-	cost = 2 // shortcut
 
 /datum/map_template/ruin/space/ussp
 	id = "ussp"
@@ -294,7 +293,8 @@
 	suffix = "syndiecakesfactory.dmm"
 	name = "Syndicakes Factory"
 	description = "Syndicate used to get funds selling corgi cakes produced here. Was it hit by meteors or by a Nanotrasen comando?"
-	cost = 5 // bloodmod, toolbox, syndie cakes and corpses
+	cost = 2
+	placement_weight = 2 // bloodmod, toolbox, syndie cakes and corpses
 	allow_duplicates = FALSE
 
 /datum/map_template/ruin/space/debris1
@@ -320,7 +320,7 @@
 	suffix = "meatpackers.dmm"
 	name = "Meat Packers"
 	description = "An old transport ship, possibly with a dubious past. It smells faintly of meat."
-	cost = 4 // Toolbox, syndie eva, pirates, chem dispenser, big
+	cost = 3
 	allow_duplicates = FALSE
 
 /datum/map_template/ruin/space/mo19
@@ -328,7 +328,8 @@
 	suffix = "moonoutpost19.dmm"
 	name = "Moon Outpost 19"
 	description = "A now-defunct outpost, with the last received signal being that of distress."
-	cost = 10 // A113, void/mech/anomalycore, research notes, huge
+	cost = 5
+	placement_weight = 3 // A113, void/mech/anomalycore, research notes
 	allow_duplicates = FALSE
 
 /datum/map_template/ruin/space/voyager
@@ -343,7 +344,6 @@
 	suffix = "wreckedcargoship.dmm"
 	name = "Wrecked Cargoship"
 	description = "A cargo shuttle in a wrecked condition. There are many unknown horrors in space and looks like its last crew has faced one of them."
-	cost = 2 // With the loot it contains it shouldn't be found frequently
 	allow_duplicates = FALSE
 
 /datum/map_template/ruin/space/abandoned_engi_sat
@@ -358,7 +358,6 @@
 	suffix = "rocky_motel.dmm"
 	name = "Rocky Motel"
 	description = "A cozy little home nestled in an asteroid, perfect for one or two people!"
-	cost = 2
 	allow_duplicates = FALSE
 
 /datum/map_template/ruin/space/casino
@@ -366,7 +365,7 @@
 	suffix = "casino.dmm"
 	name = "Dorian Casino"
 	description = "A swanky space casino."
-	cost = 3 // shortcut, pirates, medium-size
+	cost = 2
 	allow_duplicates = FALSE
 
 /datum/map_template/ruin/space/abandoned_security_shuttle
@@ -374,5 +373,5 @@
 	suffix = "abandoned_sec_shuttle.dmm"
 	name = "Abandoned Security Shuttle"
 	description = "A security shuttle that has been floating in space."
-	cost = 2 // medbeam, enforcer, first aid kit. But extra tiny
+	placement_weight = 2 // damaged medbeam, enforcer
 	allow_duplicates = FALSE

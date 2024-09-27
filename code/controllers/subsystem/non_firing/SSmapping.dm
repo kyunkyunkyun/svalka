@@ -228,13 +228,13 @@ SUBSYSTEM_DEF(mapping)
 
 	log_startup_progress("Loaded random space levels in [stop_watch(load_zlevels_timer)]s.")
 
-	// Now spawn ruins, random budget between 40 and 60 for all zlevels combined.
+	// Now spawn ruins, random budget between 20 and 30 for all zlevels combined.
 	// While this may seem like a high number, the amount of ruin Z levels can be anywhere between 3 and 7.
 	// Note that this budget is not split evenly accross all zlevels
 	log_startup_progress("Seeding ruins...")
 	var/seed_ruins_timer = start_watch()
 	var/space_z_levels = levels_by_trait(SPAWN_RUINS)
-	seedRuins(space_z_levels, rand(40, 60), /area/space, GLOB.space_ruins_templates)
+	seedRuins(space_z_levels, rand(20, 30), /area/space, GLOB.space_ruins_templates)
 	log_startup_progress("Successfully seeded ruins in [stop_watch(seed_ruins_timer)]s.")
 	seed_space_salvage(space_z_levels)
 
