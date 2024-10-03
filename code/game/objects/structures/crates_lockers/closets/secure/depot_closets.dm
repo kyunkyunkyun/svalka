@@ -3,7 +3,7 @@
 	desc = "A red and black lootbox full of things the Head of Security is going to flip their shit over."
 	locked = FALSE
 	anchored = TRUE
-	req_access = list()
+	req_access = list(ACCESS_SYNDICATE)
 	layer = 2.9 // ensures the loot they drop always appears on top of them.
 	var/is_armory = FALSE
 	var/ignore_use = FALSE
@@ -56,5 +56,5 @@
 		ignore_use = FALSE
 
 /obj/structure/closet/secure_closet/syndicate/depot/armory
-	req_access = list(ACCESS_SYNDICATE)
+	req_access = list(ACCESS_SYNDICATE_COMMAND) // can't open without killing QM/breaking closet
 	is_armory = TRUE
