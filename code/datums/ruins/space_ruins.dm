@@ -3,7 +3,7 @@
 	cost = 1 // round() of your ruin's square divided by 1000 (tiles basically). Default is 1. 0 is used for ruins with `always_place = TRUE`
 	// cost = max(round(square, 1000)/1000, 1)
 	// 100x100 ruin costs 10, 70x70 ruin costs 5, 50x50 costs 3 etc
-	placement_weight = 1 // values from 1 to 3. 1 for minor loot, 2 for mediocre and 3 for highest-tier. Default is 1
+	placement_weight = 1 // values from 1 to 2. 2 for major ruins with high-value loot, 1 for the rest. Default is 1
 	ci_exclude = /datum/map_template/ruin/space
 
 /datum/map_template/ruin/space/zoo
@@ -61,7 +61,7 @@
 		evidence of construction, hook it covertly into the \
 		telecommunications network and hope for the best."
 	cost = 6
-	placement_weight = 3 // dvorak+mo19 experience + mini boss
+	placement_weight = 2 // dvorak+mo19 experience + mini boss
 	allow_duplicates = FALSE // this shouldn't be spawning more than once anymore
 
 /datum/map_template/ruin/space/derelict1
@@ -89,7 +89,6 @@
 	description = "These hulks were once part of a larger structure, where \
 		the three great \[REDACTED\] were forged."
 	cost = 2
-	placement_weight = 2 // A space dragon!
 	allow_duplicates = FALSE
 
 /datum/map_template/ruin/space/derelict4
@@ -188,7 +187,6 @@
 	suffix = "wizardcrash.dmm"
 	name = "Crashed Wizard Shuttle"
 	description = "A shuttle of the Wizard Federation, sent out to crush some wandless scum. Unfortunately, the pilot suffered a magic-related accident and the shuttle crashed into a nearby asteroid."
-	placement_weight = 2 // tarot card + random artefact
 
 /datum/map_template/ruin/space/abandonedtele
 	id = "abandonedtele"
@@ -202,7 +200,6 @@
 	name = "Blown-out Telecommunications Satellite"
 	description = "The remains of an old telecommunications satellite once utilised by Nanotrasen. It lays derelict, with quite a few pieces missing."
 	cost = 2 // This is a chonky boy
-	placement_weight = 2 // bloodmod, teleporter console, toolbox, 50u syringe, nvg
 	allow_duplicates = FALSE // Absolutely huge, also has its own APC and the area isnt set to allow many
 
 /datum/map_template/ruin/space/malftcommsat
@@ -211,7 +208,7 @@
 	name = "D.V.O.R.A.K'S Telecommunications Satellite"
 	description = "Seems the telecomunication satellite that went dark 4 years ago finally re-appeared on scanners? Strange signals are coming from it."
 	cost = 8 // Huge. Large. In charge
-	placement_weight = 3 // In charge indeed
+	placement_weight = 2 // In charge indeed
 	allow_duplicates = FALSE // One sadistic malfunctioning AI is enough. Also unique apcs.
 
 /datum/map_template/ruin/space/clownmime
@@ -259,6 +256,8 @@
 	suffix = "ussp.dmm"
 	name = "USSP"
 	description = "A decript station of seemingly Soviet origin. The last contact had with this station was a distress signal, and the rest was dark."
+	cost = 8 // This ruin is 100x100 tiles, so we dont want it to be treated like a 10x10 meteor
+	placement_weight = 2 // 2 mosins, 3 syndie evas, 1 taser, 2 batons, 1 double-barrel, 1 kitty
 	allow_duplicates = FALSE // One of these has enough loot
 
 /datum/map_template/ruin/space/whiteship
@@ -291,10 +290,9 @@
 /datum/map_template/ruin/space/syndiecakesfactory
 	id = "Syndiecakes Factory"
 	suffix = "syndiecakesfactory.dmm"
-	name = "Syndicakes Factory"
-	description = "Syndicate used to get funds selling corgi cakes produced here. Was it hit by meteors or by a Nanotrasen comando?"
+	name = "Syndiecakes Factory"
+	description = "Syndicate used to get funds selling corgi cakes produced here. Was it hit by meteors or by a Nanotrasen commando?"
 	cost = 2
-	placement_weight = 2 // bloodmod, toolbox, syndie cakes and corpses
 	allow_duplicates = FALSE
 
 /datum/map_template/ruin/space/debris1
@@ -329,7 +327,7 @@
 	name = "Moon Outpost 19"
 	description = "A now-defunct outpost, with the last received signal being that of distress."
 	cost = 5
-	placement_weight = 3 // A113, void/mech/anomalycore, research notes
+	placement_weight = 2 // A113, void/mech/anomalycore, research notes
 	allow_duplicates = FALSE
 
 /datum/map_template/ruin/space/voyager
@@ -373,5 +371,4 @@
 	suffix = "abandoned_sec_shuttle.dmm"
 	name = "Abandoned Security Shuttle"
 	description = "A security shuttle that has been floating in space."
-	placement_weight = 2 // damaged medbeam, enforcer
 	allow_duplicates = FALSE
