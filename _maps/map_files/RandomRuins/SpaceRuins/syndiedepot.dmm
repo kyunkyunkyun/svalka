@@ -1,15 +1,15 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/turf/template_noop,
+/turf/space,
 /area/syndicate_depot/perimeter)
 "ab" = (
 /obj/effect/landmark{
 	name = "syndi_depot_backup"
 	},
-/turf/template_noop,
+/turf/space,
 /area/syndicate_depot/perimeter)
 "ac" = (
-/turf/template_noop,
+/turf/space,
 /area/syndicate_depot/outer)
 "ad" = (
 /turf/simulated/mineral,

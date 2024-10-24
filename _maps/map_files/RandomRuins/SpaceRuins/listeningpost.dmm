@@ -605,8 +605,8 @@
 /turf/simulated/floor/plasteel/dark,
 /area/ruin/space/syndicate_listening_station)
 "Zw" = (
-/turf/template_noop,
-/area/template_noop)
+/turf/space,
+/area/space)
 
 (1,1,1) = {"
 Zw
@@ -625,13 +625,14 @@ Zw
 Zw
 Zw
 Zw
-pV
-WN
-mC
-AT
-pV
-WN
-mC
+Zw
+Zw
+Zw
+Zw
+Zw
+Zw
+Zw
+Zw
 Zw
 Zw
 Zw
@@ -665,16 +666,15 @@ Zw
 Zw
 Zw
 Zw
-yn
-AT
+Zw
+Zw
 pV
-sf
+WN
 mC
 AT
 pV
-sf
+WN
 mC
-AT
 Zw
 Zw
 Zw
@@ -684,7 +684,9 @@ Zw
 Zw
 Zw
 Zw
-yn
+Zw
+Zw
+Zw
 Zw
 Zw
 Zw
@@ -694,7 +696,6 @@ Zw
 "}
 (3,1,1) = {"
 Zw
-yn
 Zw
 Zw
 Zw
@@ -706,7 +707,8 @@ Zw
 Zw
 Zw
 Zw
-yn
+Zw
+Zw
 yn
 AT
 pV
@@ -723,12 +725,13 @@ Zw
 Zw
 Zw
 Zw
-yn
+Zw
+Zw
 Zw
 yn
-yn
 Zw
-yn
+Zw
+Zw
 Zw
 Zw
 Zw
@@ -737,48 +740,48 @@ Zw
 (4,1,1) = {"
 Zw
 yn
+Zw
+Zw
+Zw
+Zw
+Zw
+Zw
+Zw
+Zw
+Zw
+Zw
+Zw
 yn
 yn
-yn
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-yn
-yn
-yn
-pV
-sf
-mC
 AT
 pV
 sf
 mC
 AT
+pV
+sf
+mC
 AT
 Zw
 Zw
 Zw
 Zw
 Zw
-yn
-yn
-yn
+Zw
 yn
 Zw
 yn
 yn
-yn
 Zw
 yn
+Zw
+Zw
+Zw
+Zw
+Zw
 "}
 (5,1,1) = {"
 Zw
-Zw
 yn
 yn
 yn
@@ -789,18 +792,18 @@ Zw
 Zw
 Zw
 Zw
+Zw
+Zw
 yn
 yn
 yn
-yn
+pV
+sf
+mC
 AT
-hr
-AT
-AT
-AT
-hr
-AT
-AT
+pV
+sf
+mC
 AT
 AT
 Zw
@@ -809,16 +812,61 @@ Zw
 Zw
 Zw
 yn
-cB
-Zw
-Zw
-cB
 yn
 yn
+yn
+Zw
+yn
+yn
+yn
+Zw
 yn
 Zw
 "}
 (6,1,1) = {"
+Zw
+Zw
+yn
+yn
+yn
+yn
+Zw
+Zw
+Zw
+Zw
+Zw
+Zw
+yn
+yn
+yn
+yn
+AT
+hr
+AT
+AT
+AT
+hr
+AT
+AT
+AT
+AT
+Zw
+Zw
+Zw
+Zw
+Zw
+yn
+cB
+Zw
+Zw
+cB
+yn
+yn
+yn
+Zw
+Zw
+"}
+(7,1,1) = {"
 Zw
 Zw
 yn
@@ -859,8 +907,9 @@ yn
 Zw
 yn
 Zw
+Zw
 "}
-(7,1,1) = {"
+(8,1,1) = {"
 Zw
 Zw
 yn
@@ -901,8 +950,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(8,1,1) = {"
+(9,1,1) = {"
 Zw
 Zw
 Zw
@@ -943,8 +993,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(9,1,1) = {"
+(10,1,1) = {"
 Zw
 Zw
 Zw
@@ -985,8 +1036,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(10,1,1) = {"
+(11,1,1) = {"
 Zw
 Zw
 Zw
@@ -1027,8 +1079,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(11,1,1) = {"
+(12,1,1) = {"
 Zw
 Zw
 Zw
@@ -1069,8 +1122,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(12,1,1) = {"
+(13,1,1) = {"
 Zw
 Zw
 Zw
@@ -1111,8 +1165,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(13,1,1) = {"
+(14,1,1) = {"
 Zw
 Zw
 Zw
@@ -1153,8 +1208,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(14,1,1) = {"
+(15,1,1) = {"
 Zw
 Zw
 Zw
@@ -1195,8 +1251,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(15,1,1) = {"
+(16,1,1) = {"
 Zw
 Zw
 Zw
@@ -1237,8 +1294,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(16,1,1) = {"
+(17,1,1) = {"
 Zw
 Zw
 Zw
@@ -1279,8 +1337,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(17,1,1) = {"
+(18,1,1) = {"
 Zw
 Zw
 Zw
@@ -1321,8 +1380,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(18,1,1) = {"
+(19,1,1) = {"
 Zw
 Zw
 Zw
@@ -1363,8 +1423,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(19,1,1) = {"
+(20,1,1) = {"
 Zw
 Zw
 Zw
@@ -1405,8 +1466,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(20,1,1) = {"
+(21,1,1) = {"
 Zw
 Zw
 Zw
@@ -1447,8 +1509,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(21,1,1) = {"
+(22,1,1) = {"
 Zw
 Zw
 Zw
@@ -1489,8 +1552,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(22,1,1) = {"
+(23,1,1) = {"
 Zw
 Zw
 Zw
@@ -1531,8 +1595,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(23,1,1) = {"
+(24,1,1) = {"
 Zw
 Zw
 Zw
@@ -1573,8 +1638,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(24,1,1) = {"
+(25,1,1) = {"
 Zw
 Zw
 Zw
@@ -1615,8 +1681,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(25,1,1) = {"
+(26,1,1) = {"
 Zw
 Zw
 Zw
@@ -1657,8 +1724,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(26,1,1) = {"
+(27,1,1) = {"
 Zw
 Zw
 Zw
@@ -1699,8 +1767,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(27,1,1) = {"
+(28,1,1) = {"
 Zw
 Zw
 Zw
@@ -1741,8 +1810,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(28,1,1) = {"
+(29,1,1) = {"
 Zw
 Zw
 Zw
@@ -1783,8 +1853,9 @@ Zw
 Zw
 Zw
 Zw
+Zw
 "}
-(29,1,1) = {"
+(30,1,1) = {"
 Zw
 Zw
 Zw
@@ -1825,55 +1896,15 @@ Zw
 Zw
 Zw
 Zw
-"}
-(30,1,1) = {"
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
 Zw
 "}
 (31,1,1) = {"
 Zw
 Zw
 Zw
-yn
-yn
+Zw
+Zw
+Zw
 Zw
 Zw
 Zw
@@ -1913,14 +1944,15 @@ Zw
 (32,1,1) = {"
 Zw
 Zw
-yn
+Zw
 yn
 yn
 Zw
 Zw
 Zw
 Zw
-yn
+Zw
+Zw
 Zw
 Zw
 Zw
@@ -1957,12 +1989,13 @@ Zw
 Zw
 yn
 yn
-cB
-cB
+yn
+Zw
+Zw
 Zw
 Zw
 yn
-yn
+Zw
 Zw
 Zw
 Zw
@@ -1997,15 +2030,16 @@ Zw
 (34,1,1) = {"
 Zw
 Zw
+yn
+yn
+cB
+cB
+Zw
 Zw
 yn
 yn
-yn
 Zw
 Zw
-yn
-yn
-yn
 Zw
 Zw
 Zw
@@ -2039,16 +2073,17 @@ Zw
 (35,1,1) = {"
 Zw
 Zw
-yn
-Zw
-Zw
-Zw
-Zw
-Zw
 Zw
 yn
 yn
 yn
+Zw
+Zw
+yn
+yn
+yn
+Zw
+Zw
 Zw
 Zw
 Zw
@@ -2088,9 +2123,10 @@ Zw
 Zw
 Zw
 Zw
+yn
+yn
+yn
 Zw
-yn
-yn
 Zw
 Zw
 Zw
@@ -2123,16 +2159,17 @@ Zw
 (37,1,1) = {"
 Zw
 Zw
-Zw
-Zw
-Zw
-Zw
 yn
 Zw
 Zw
 Zw
 Zw
+Zw
+Zw
+Zw
 yn
+yn
+Zw
 Zw
 Zw
 Zw
@@ -2169,11 +2206,12 @@ Zw
 Zw
 Zw
 Zw
+yn
 Zw
 Zw
 Zw
 Zw
-Zw
+yn
 Zw
 Zw
 Zw
@@ -2206,47 +2244,6 @@ Zw
 "}
 (39,1,1) = {"
 Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-Zw
-"}
-(40,1,1) = {"
 Zw
 Zw
 Zw

@@ -15,8 +15,8 @@
 /area/ruin/space/abandoned_engi_sat)
 "aR" = (
 /mob/living/simple_animal/hostile/carp/megacarp,
-/turf/template_noop,
-/area/template_noop)
+/turf/space,
+/area/space)
 "bi" = (
 /obj/structure/chair/comfy/black{
 	dir = 8
@@ -120,7 +120,7 @@
 	},
 /obj/item/stack/cable_coil,
 /obj/structure/lattice,
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "dz" = (
 /obj/structure/table/reinforced,
@@ -137,7 +137,7 @@
 /turf/simulated/floor/plating/airless,
 /area/ruin/space/abandoned_engi_sat)
 "dN" = (
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "es" = (
 /obj/machinery/light{
@@ -250,8 +250,8 @@
 /obj/structure/disposalpipe/segment/corner{
 	dir = 8
 	},
-/turf/template_noop,
-/area/template_noop)
+/turf/space,
+/area/space)
 "hP" = (
 /obj/machinery/status_display{
 	mode = 0;
@@ -344,7 +344,7 @@
 	pixel_y = -4
 	},
 /obj/structure/lattice,
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "ky" = (
 /obj/effect/spawner/window/reinforced,
@@ -411,7 +411,7 @@
 	d1 = 4;
 	d2 = 8
 	},
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "lQ" = (
 /obj/machinery/driver_button{
@@ -430,7 +430,7 @@
 	pixel_x = -1;
 	pixel_y = -2
 	},
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "mB" = (
 /obj/structure/cable{
@@ -456,7 +456,7 @@
 /obj/item/bedsheet/orange{
 	dir = 8
 	},
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "mW" = (
 /obj/machinery/suit_storage_unit{
@@ -488,7 +488,7 @@
 	d1 = 4;
 	d2 = 8
 	},
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "ni" = (
 /obj/machinery/door/poddoor{
@@ -576,16 +576,16 @@
 /area/ruin/space/abandoned_engi_sat)
 "rn" = (
 /mob/living/simple_animal/hostile/carp,
-/turf/template_noop,
-/area/template_noop)
+/turf/space,
+/area/space)
 "rr" = (
 /obj/structure/lattice,
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "rw" = (
 /obj/structure/lattice,
 /obj/item/stack/sheet/metal,
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "rE" = (
 /obj/structure/cable{
@@ -613,7 +613,7 @@
 /obj/item/stack/cable_coil,
 /obj/structure/lattice,
 /obj/item/stack/sheet/metal,
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "si" = (
 /turf/simulated/floor/plasteel{
@@ -643,7 +643,7 @@
 	d1 = 2;
 	d2 = 8
 	},
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "sO" = (
 /obj/structure/table/wood,
@@ -672,7 +672,7 @@
 	pixel_y = -5
 	},
 /obj/structure/lattice,
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "uO" = (
 /obj/machinery/light,
@@ -769,8 +769,8 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/turf/template_noop,
-/area/template_noop)
+/turf/space,
+/area/space)
 "yj" = (
 /obj/machinery/door/airlock{
 	name = "Restroom"
@@ -791,7 +791,7 @@
 /obj/item/stack/cable_coil,
 /obj/structure/lattice,
 /obj/item/stack/sheet/metal,
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "yt" = (
 /obj/machinery/door/poddoor{
@@ -809,7 +809,7 @@
 /area/ruin/space/abandoned_engi_sat)
 "yJ" = (
 /obj/structure/lattice,
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "zb" = (
 /obj/item/radio/intercom{
@@ -853,7 +853,7 @@
 "Al" = (
 /obj/item/stack/cable_coil,
 /obj/structure/lattice,
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "AD" = (
 /obj/structure/lattice/catwalk,
@@ -867,7 +867,7 @@
 	d1 = 2;
 	d2 = 4
 	},
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "Bu" = (
 /obj/machinery/door/poddoor{
@@ -907,7 +907,7 @@
 /obj/item/stack/sheet/metal{
 	dir = 1
 	},
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "CY" = (
 /obj/machinery/computer/nonfunctional{
@@ -1019,7 +1019,7 @@
 /area/ruin/space/abandoned_engi_sat)
 "Gi" = (
 /obj/structure/lattice/catwalk,
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "Gt" = (
 /obj/effect/spawner/window/reinforced,
@@ -1037,7 +1037,7 @@
 	d1 = 2;
 	d2 = 8
 	},
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "GP" = (
 /obj/effect/turf_decal/stripes/line{
@@ -1136,8 +1136,8 @@
 	},
 /area/ruin/space/abandoned_engi_sat)
 "LP" = (
-/turf/template_noop,
-/area/template_noop)
+/turf/space,
+/area/space)
 "Mv" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
@@ -1150,7 +1150,7 @@
 	d1 = 1;
 	d2 = 4
 	},
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "MK" = (
 /obj/machinery/mass_driver{
@@ -1193,7 +1193,7 @@
 	d1 = 2;
 	d2 = 4
 	},
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "OG" = (
 /obj/structure/table,
@@ -1216,7 +1216,7 @@
 	d1 = 2;
 	d2 = 4
 	},
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "Pa" = (
 /obj/machinery/driver_button{
@@ -1248,7 +1248,7 @@
 /obj/item/stack/sheet/metal{
 	dir = 1
 	},
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "PH" = (
 /obj/structure/cable{
@@ -1291,7 +1291,7 @@
 	d1 = 2;
 	d2 = 4
 	},
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "QJ" = (
 /obj/structure/sink{
@@ -1327,7 +1327,7 @@
 /area/ruin/space/abandoned_engi_sat)
 "Rs" = (
 /obj/item/stack/sheet/metal,
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "RP" = (
 /obj/machinery/light_switch{
@@ -1380,13 +1380,13 @@
 /obj/item/stack/rods{
 	icon_state = "rods-1"
 	},
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "Vx" = (
 /obj/item/stack/sheet/metal{
 	dir = 8
 	},
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "VJ" = (
 /obj/structure/lattice/catwalk,
@@ -1400,12 +1400,12 @@
 	d1 = 2;
 	d2 = 8
 	},
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "VZ" = (
 /obj/item/stack/sheet/metal,
 /obj/item/stack/cable_coil,
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "WJ" = (
 /obj/machinery/washing_machine,
@@ -1455,7 +1455,7 @@
 	d1 = 1;
 	d2 = 4
 	},
-/turf/template_noop,
+/turf/space,
 /area/ruin/space/abandoned_engi_sat)
 "YV" = (
 /obj/structure/window/reinforced/tinted{
@@ -2539,40 +2539,6 @@ LP
 LP
 "}
 (31,1,1) = {"
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-LP
-"}
-(32,1,1) = {"
 LP
 LP
 LP

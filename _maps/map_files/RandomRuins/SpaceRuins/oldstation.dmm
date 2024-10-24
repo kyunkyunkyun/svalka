@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/turf/template_noop,
-/area/template_noop)
+/turf/space,
+/area/space)
 "ab" = (
 /turf/simulated/mineral/random,
 /area/ruin/unpowered)
@@ -171,7 +171,7 @@
 /area/ruin/ancientstation/comm)
 "aH" = (
 /obj/item/solar_assembly,
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "aI" = (
 /obj/machinery/light/small{
@@ -603,8 +603,8 @@
 /area/ruin/ancientstation/betanorth)
 "bV" = (
 /obj/effect/decal/remains/human,
-/turf/template_noop,
-/area/template_noop)
+/turf/space,
+/area/space)
 "bW" = (
 /obj/effect/spawner/window/reinforced/grilled,
 /obj/structure/transit_tube/horizontal,
@@ -997,7 +997,7 @@
 /area/ruin/ancientstation/proto)
 "cX" = (
 /obj/structure/transit_tube,
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "cY" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1017,7 +1017,7 @@
 "db" = (
 /obj/item/solar_assembly,
 /obj/structure/lattice,
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "dc" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1079,12 +1079,12 @@
 /obj/structure/transit_tube_pod{
 	dir = 4
 	},
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "dl" = (
 /obj/item/stack/cable_coil,
-/turf/template_noop,
-/area/template_noop)
+/turf/space,
+/area/space)
 "dm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor,
@@ -2335,8 +2335,8 @@
 /area/ruin/ancientstation/thetacorridor)
 "gc" = (
 /mob/living/simple_animal/hostile/carp,
-/turf/template_noop,
-/area/template_noop)
+/turf/space,
+/area/space)
 "gd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -4829,7 +4829,7 @@
 /area/ruin/ancientstation/thetacorridor)
 "uQ" = (
 /obj/structure/lattice,
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "AP" = (
 /obj/effect/spawner/window/reinforced/grilled,
@@ -4868,7 +4868,7 @@
 /obj/structure/transit_tube/horizontal{
 	dir = 4
 	},
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "LD" = (
 /obj/machinery/light/small{
@@ -4887,7 +4887,7 @@
 /area/ruin/ancientstation/betanorth)
 "VT" = (
 /obj/structure/transit_tube/horizontal,
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "Xq" = (
 /mob/living/simple_animal/hostile/hivebot,
@@ -4896,6 +4896,8 @@
 /area/ruin/ancientstation/thetacorridor)
 
 (1,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -4954,6 +4956,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 aV
 be
 bf
@@ -5002,6 +5006,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 aW
 bf
 bf
@@ -5040,6 +5046,8 @@ aa
 aa
 "}
 (4,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -5098,6 +5106,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 uQ
 aV
 bo
@@ -5136,6 +5146,8 @@ aa
 aa
 "}
 (6,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -5184,6 +5196,8 @@ aa
 aa
 "}
 (7,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -5241,6 +5255,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 ab
 ab
 ab
@@ -5289,6 +5305,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 uQ
 ab
 aa
@@ -5328,6 +5346,8 @@ aa
 aa
 "}
 (10,1,1) = {"
+aa
+aa
 gc
 aa
 aa
@@ -5385,6 +5405,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 uQ
 aa
 aa
@@ -5424,6 +5446,8 @@ aa
 aa
 "}
 (12,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -5472,6 +5496,8 @@ aa
 aa
 "}
 (13,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -5528,6 +5554,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 uQ
 uQ
 aa
@@ -5568,6 +5596,8 @@ aa
 aa
 "}
 (15,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -5624,6 +5654,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 uQ
 aa
 aa
@@ -5664,6 +5696,8 @@ aa
 aa
 "}
 (17,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -5720,6 +5754,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 uQ
 aa
 aa
@@ -5760,6 +5796,8 @@ aa
 aa
 "}
 (19,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -5816,6 +5854,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 uQ
 aa
 aa
@@ -5856,6 +5896,8 @@ aa
 aa
 "}
 (21,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -5912,6 +5954,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 uQ
 aa
 aa
@@ -5952,6 +5996,8 @@ aa
 aa
 "}
 (23,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -6008,6 +6054,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 uQ
 aa
 aa
@@ -6048,6 +6096,8 @@ aa
 aa
 "}
 (25,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -6104,6 +6154,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 uQ
 aa
 aa
@@ -6144,6 +6196,8 @@ aa
 aa
 "}
 (27,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -6200,6 +6254,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 uQ
 aa
 aa
@@ -6240,6 +6296,8 @@ aa
 aa
 "}
 (29,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -6294,6 +6352,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 az
 az
 aK
@@ -6336,6 +6396,8 @@ aa
 aa
 "}
 (31,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -6389,6 +6451,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 al
 al
 al
@@ -6432,6 +6496,8 @@ aa
 aa
 "}
 (33,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -6484,6 +6550,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 am
 aM
 aO
@@ -6528,6 +6596,8 @@ aa
 aa
 "}
 (35,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -6580,6 +6650,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 an
 au
 aA
@@ -6628,6 +6700,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 an
 av
 aB
@@ -6672,6 +6746,8 @@ aa
 aa
 "}
 (38,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -6724,6 +6800,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 an
 aY
 at
@@ -6768,6 +6846,8 @@ aa
 aa
 "}
 (40,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -6820,6 +6900,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 al
 al
 bh
@@ -6864,6 +6946,8 @@ aa
 aa
 "}
 (42,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -6918,6 +7002,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 az
 aI
 aP
@@ -6966,6 +7052,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 az
 aJ
 aQ
@@ -7008,6 +7096,8 @@ aa
 aa
 "}
 (45,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -7063,6 +7153,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 uQ
 aa
 aa
@@ -7111,6 +7203,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 uQ
 aa
 aa
@@ -7152,6 +7246,8 @@ aa
 aa
 "}
 (48,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -7208,6 +7304,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 uQ
 aa
 aa
@@ -7248,6 +7346,8 @@ aa
 aa
 "}
 (50,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -7301,6 +7401,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 ab
 kH
 kH
@@ -7349,6 +7451,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 ab
 kH
 kH
@@ -7392,6 +7496,8 @@ aa
 aa
 "}
 (53,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -7457,6 +7563,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 ab
 ab
 aa
@@ -7488,6 +7596,8 @@ ab
 aa
 "}
 (55,1,1) = {"
+aa
+aa
 gc
 aa
 aa
@@ -7536,6 +7646,8 @@ ab
 aa
 "}
 (56,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -7596,6 +7708,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 bu
 bN
 cl
@@ -7632,6 +7746,8 @@ ab
 aa
 "}
 (58,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -7685,6 +7801,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 uQ
 uQ
 aa
@@ -7728,6 +7846,8 @@ aa
 aa
 "}
 (60,1,1) = {"
+aa
+aa
 aa
 aa
 aa
@@ -7778,6 +7898,8 @@ gc
 (61,1,1) = {"
 aa
 aa
+aa
+aa
 ab
 ab
 ab
@@ -7824,6 +7946,8 @@ aa
 aa
 "}
 (62,1,1) = {"
+aa
+aa
 aa
 ab
 ab
@@ -7873,6 +7997,8 @@ aa
 "}
 (63,1,1) = {"
 aa
+aa
+aa
 ab
 ac
 ad
@@ -7921,6 +8047,8 @@ aa
 "}
 (64,1,1) = {"
 aa
+aa
+aa
 ab
 ac
 ap
@@ -7968,6 +8096,8 @@ aa
 aa
 "}
 (65,1,1) = {"
+aa
+aa
 ab
 ab
 ac
@@ -8016,6 +8146,8 @@ aa
 aa
 "}
 (66,1,1) = {"
+aa
+aa
 ab
 ab
 ac
@@ -8064,6 +8196,8 @@ aa
 aa
 "}
 (67,1,1) = {"
+aa
+aa
 ab
 ab
 ac
@@ -8112,6 +8246,8 @@ aa
 aa
 "}
 (68,1,1) = {"
+aa
+aa
 ab
 ab
 ac
@@ -8160,6 +8296,8 @@ aa
 aa
 "}
 (69,1,1) = {"
+aa
+aa
 ab
 ab
 ac
@@ -8208,6 +8346,8 @@ aa
 aa
 "}
 (70,1,1) = {"
+aa
+aa
 ab
 ab
 ac
@@ -8256,6 +8396,8 @@ aa
 aa
 "}
 (71,1,1) = {"
+aa
+aa
 ab
 ab
 ac
@@ -8304,6 +8446,8 @@ aa
 aa
 "}
 (72,1,1) = {"
+aa
+aa
 ab
 ab
 ac
@@ -8352,6 +8496,8 @@ aa
 aa
 "}
 (73,1,1) = {"
+aa
+aa
 ab
 ab
 ac
@@ -8400,6 +8546,8 @@ aa
 aa
 "}
 (74,1,1) = {"
+aa
+aa
 ab
 ab
 ac
@@ -8448,6 +8596,8 @@ aa
 aa
 "}
 (75,1,1) = {"
+aa
+aa
 ab
 ab
 ac
@@ -8497,6 +8647,8 @@ aa
 "}
 (76,1,1) = {"
 aa
+aa
+aa
 ab
 ac
 ak
@@ -8544,6 +8696,8 @@ aa
 aa
 "}
 (77,1,1) = {"
+aa
+aa
 aa
 ab
 ab
@@ -8593,6 +8747,8 @@ aa
 "}
 (78,1,1) = {"
 aa
+aa
+aa
 ab
 ab
 ab
@@ -8640,6 +8796,8 @@ aa
 aa
 "}
 (79,1,1) = {"
+aa
+aa
 aa
 aa
 ab
@@ -8707,6 +8865,8 @@ aa
 aa
 aa
 aa
+aa
+aa
 bu
 bu
 bu
@@ -8720,6 +8880,106 @@ bu
 bu
 bu
 bu
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(81,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(82,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa

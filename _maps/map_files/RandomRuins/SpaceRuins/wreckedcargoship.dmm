@@ -30,8 +30,8 @@
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8
 	},
-/turf/template_noop,
-/area/template_noop)
+/turf/space,
+/area/space/nearstation)
 "ca" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/kirbyplants,
@@ -91,8 +91,8 @@
 	},
 /area/ruin/space/wreck_cargoship)
 "ea" = (
-/turf/template_noop,
-/area/template_noop)
+/turf/space,
+/area/space)
 "eC" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plasteel{
@@ -492,8 +492,8 @@
 "qg" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/marker_beacon/dock_marker/collision,
-/turf/template_noop,
-/area/template_noop)
+/turf/space,
+/area/space/nearstation)
 "qr" = (
 /obj/structure/largecrate,
 /obj/effect/decal/cleanable/dirt,
@@ -756,8 +756,8 @@
 /area/ruin/space/wreck_cargoship)
 "DY" = (
 /obj/structure/lattice,
-/turf/template_noop,
-/area/template_noop)
+/turf/space,
+/area/space/nearstation)
 "Ei" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/structure/railing,
@@ -1247,12 +1247,12 @@
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8
 	},
-/turf/template_noop,
-/area/template_noop)
+/turf/space,
+/area/space/nearstation)
 "VZ" = (
 /obj/structure/girder/displaced,
-/turf/template_noop,
-/area/template_noop)
+/turf/space,
+/area/space/nearstation)
 "Wj" = (
 /obj/structure/railing/corner{
 	dir = 8

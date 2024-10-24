@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/turf/template_noop,
-/area/template_noop)
+/turf/space,
+/area/space)
 "ab" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -4166,7 +4166,7 @@
 "nu" = (
 /obj/structure/lattice,
 /obj/item/stack/sheet/plasteel,
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "nw" = (
 /obj/machinery/door/airlock,
@@ -9933,7 +9933,10 @@
 /area/ruin/space/moonbase19)
 "MT" = (
 /obj/structure/lattice,
-/turf/template_noop,
+/obj/item/shard{
+	icon_state = "medium"
+	},
+/turf/space,
 /area/space/nearstation)
 "MU" = (
 /obj/machinery/light{
@@ -10389,7 +10392,7 @@
 	},
 /area/ruin/space/moonbase19)
 "ON" = (
-/turf/template_noop,
+/turf/space,
 /area/space/nearstation)
 "OO" = (
 /obj/item/stack/sheet/metal,
@@ -11747,11 +11750,9 @@
 /area/ruin/space/moonbase19)
 "UO" = (
 /obj/structure/lattice,
-/obj/item/shard{
-	icon_state = "medium"
-	},
-/turf/template_noop,
-/area/space/nearstation)
+/obj/machinery/door/firedoor/closed,
+/turf/space,
+/area/ruin/space/moonbase19)
 "UQ" = (
 /obj/structure/railing/corner{
 	dir = 1
@@ -12031,10 +12032,9 @@
 /turf/simulated/floor/plating,
 /area/ruin/space/moonbase19)
 "Wg" = (
-/obj/structure/lattice,
-/obj/machinery/door/firedoor/closed,
-/turf/template_noop,
-/area/ruin/space/moonbase19)
+/obj/item/stack/rods,
+/turf/space,
+/area/space/nearstation)
 "Wi" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/simulated/floor/plasteel{
@@ -12208,8 +12208,10 @@
 	},
 /area/ruin/space/moonbase19)
 "WX" = (
-/obj/item/stack/rods,
-/turf/template_noop,
+/obj/item/shard{
+	icon_state = "medium"
+	},
+/turf/space,
 /area/space/nearstation)
 "WZ" = (
 /obj/structure/chair{
@@ -12266,10 +12268,8 @@
 	},
 /area/ruin/space/moonbase19)
 "Xl" = (
-/obj/item/shard{
-	icon_state = "medium"
-	},
-/turf/template_noop,
+/obj/structure/lattice,
+/turf/space,
 /area/space/nearstation)
 "Xm" = (
 /obj/structure/railing/cap,
@@ -12979,42 +12979,43 @@ aa
 aa
 aa
 aa
-tX
-tX
-tX
-tX
-tX
-tX
-tX
 aa
 aa
 aa
-tX
-tX
-tX
-tX
-tX
-tX
-tX
-tX
-tX
-tX
-tX
 aa
 aa
 aa
-tX
-tX
-tX
-tX
-tX
-tX
 aa
-tX
-tX
 aa
-tX
-tX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -13031,6 +13032,67 @@ aa
 aa
 "}
 (2,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+tX
+tX
+tX
+tX
+tX
+tX
+tX
+aa
+aa
+aa
+tX
+tX
+tX
+tX
+tX
+tX
+tX
+tX
+tX
+tX
+tX
+aa
+aa
+aa
+tX
+tX
+tX
+tX
+tX
+tX
+aa
+tX
+tX
+aa
+tX
+tX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(3,1,1) = {"
 aa
 aa
 aa
@@ -13089,8 +13151,9 @@ aa
 aa
 aa
 aa
+aa
 "}
-(3,1,1) = {"
+(4,1,1) = {"
 aa
 aa
 aa
@@ -13149,8 +13212,9 @@ aa
 aa
 aa
 aa
+aa
 "}
-(4,1,1) = {"
+(5,1,1) = {"
 aa
 aa
 aa
@@ -13209,8 +13273,9 @@ aa
 aa
 aa
 aa
+aa
 "}
-(5,1,1) = {"
+(6,1,1) = {"
 aa
 aa
 aa
@@ -13269,8 +13334,9 @@ aa
 aa
 aa
 aa
+aa
 "}
-(6,1,1) = {"
+(7,1,1) = {"
 aa
 aa
 aa
@@ -13329,8 +13395,9 @@ aa
 aa
 aa
 aa
+aa
 "}
-(7,1,1) = {"
+(8,1,1) = {"
 aa
 aa
 aa
@@ -13389,8 +13456,9 @@ aa
 aa
 aa
 aa
+aa
 "}
-(8,1,1) = {"
+(9,1,1) = {"
 aa
 aa
 tX
@@ -13449,8 +13517,9 @@ tX
 aa
 aa
 aa
+aa
 "}
-(9,1,1) = {"
+(10,1,1) = {"
 aa
 aa
 tX
@@ -13509,8 +13578,9 @@ tX
 tX
 aa
 aa
+aa
 "}
-(10,1,1) = {"
+(11,1,1) = {"
 aa
 aa
 tX
@@ -13569,8 +13639,9 @@ tX
 tX
 aa
 aa
+aa
 "}
-(11,1,1) = {"
+(12,1,1) = {"
 aa
 aa
 tX
@@ -13629,8 +13700,9 @@ tX
 tX
 aa
 aa
+aa
 "}
-(12,1,1) = {"
+(13,1,1) = {"
 aa
 aa
 tX
@@ -13689,8 +13761,9 @@ tX
 tX
 aa
 aa
+aa
 "}
-(13,1,1) = {"
+(14,1,1) = {"
 aa
 aa
 tX
@@ -13749,8 +13822,9 @@ tX
 tX
 aa
 aa
+aa
 "}
-(14,1,1) = {"
+(15,1,1) = {"
 aa
 aa
 tX
@@ -13809,8 +13883,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(15,1,1) = {"
+(16,1,1) = {"
 aa
 aa
 tX
@@ -13869,8 +13944,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(16,1,1) = {"
+(17,1,1) = {"
 aa
 aa
 tX
@@ -13929,8 +14005,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(17,1,1) = {"
+(18,1,1) = {"
 aa
 aa
 aa
@@ -13989,8 +14066,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(18,1,1) = {"
+(19,1,1) = {"
 aa
 aa
 aa
@@ -14049,8 +14127,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(19,1,1) = {"
+(20,1,1) = {"
 aa
 aa
 aa
@@ -14109,8 +14188,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(20,1,1) = {"
+(21,1,1) = {"
 aa
 aa
 aa
@@ -14169,8 +14249,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(21,1,1) = {"
+(22,1,1) = {"
 aa
 aa
 aa
@@ -14229,8 +14310,9 @@ Wl
 tX
 tX
 tX
+aa
 "}
-(22,1,1) = {"
+(23,1,1) = {"
 aa
 aa
 tX
@@ -14289,8 +14371,9 @@ gi
 fV
 tX
 tX
+aa
 "}
-(23,1,1) = {"
+(24,1,1) = {"
 aa
 tX
 tX
@@ -14300,7 +14383,7 @@ PB
 ag
 ag
 ny
-MT
+Xl
 EE
 ag
 ag
@@ -14349,8 +14432,9 @@ fw
 hI
 tX
 tX
+aa
 "}
-(24,1,1) = {"
+(25,1,1) = {"
 aa
 tX
 tX
@@ -14359,8 +14443,8 @@ tE
 bP
 ag
 wl
-MT
 Xl
+WX
 ON
 ny
 wP
@@ -14409,8 +14493,9 @@ Ob
 ph
 tX
 tX
+aa
 "}
-(25,1,1) = {"
+(26,1,1) = {"
 aa
 tX
 tX
@@ -14418,12 +14503,12 @@ af
 DM
 bP
 ag
-MT
-MT
-ON
-WX
+Xl
+Xl
 ON
 Wg
+ON
+UO
 Za
 Sz
 ag
@@ -14469,8 +14554,9 @@ ad
 tX
 tX
 tX
+aa
 "}
-(26,1,1) = {"
+(27,1,1) = {"
 aa
 tX
 tX
@@ -14482,8 +14568,8 @@ IW
 wl
 ON
 RA
+MT
 UO
-Wg
 GD
 Fc
 mJ
@@ -14529,8 +14615,9 @@ tX
 tX
 tX
 tX
+aa
 "}
-(27,1,1) = {"
+(28,1,1) = {"
 aa
 tX
 tX
@@ -14541,7 +14628,7 @@ af
 af
 IW
 nu
-MT
+Xl
 af
 af
 RN
@@ -14589,8 +14676,9 @@ tX
 tX
 tX
 tX
+aa
 "}
-(28,1,1) = {"
+(29,1,1) = {"
 aa
 tX
 tX
@@ -14649,8 +14737,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(29,1,1) = {"
+(30,1,1) = {"
 aa
 aa
 tX
@@ -14709,8 +14798,9 @@ tX
 tX
 aa
 aa
+aa
 "}
-(30,1,1) = {"
+(31,1,1) = {"
 aa
 aa
 tX
@@ -14769,8 +14859,9 @@ tX
 tX
 aa
 aa
+aa
 "}
-(31,1,1) = {"
+(32,1,1) = {"
 aa
 aa
 tX
@@ -14829,8 +14920,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(32,1,1) = {"
+(33,1,1) = {"
 aa
 aa
 tX
@@ -14889,8 +14981,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(33,1,1) = {"
+(34,1,1) = {"
 aa
 aa
 aa
@@ -14949,8 +15042,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(34,1,1) = {"
+(35,1,1) = {"
 aa
 aa
 aa
@@ -15009,8 +15103,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(35,1,1) = {"
+(36,1,1) = {"
 aa
 aa
 aa
@@ -15069,8 +15164,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(36,1,1) = {"
+(37,1,1) = {"
 aa
 aa
 tX
@@ -15129,8 +15225,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(37,1,1) = {"
+(38,1,1) = {"
 aa
 aa
 tX
@@ -15189,8 +15286,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(38,1,1) = {"
+(39,1,1) = {"
 aa
 aa
 tX
@@ -15249,8 +15347,9 @@ ag
 tX
 tX
 aa
+aa
 "}
-(39,1,1) = {"
+(40,1,1) = {"
 aa
 aa
 tX
@@ -15309,8 +15408,9 @@ ag
 ag
 tX
 aa
+aa
 "}
-(40,1,1) = {"
+(41,1,1) = {"
 aa
 aa
 tX
@@ -15369,8 +15469,9 @@ tW
 ag
 tX
 tX
+aa
 "}
-(41,1,1) = {"
+(42,1,1) = {"
 aa
 aa
 tX
@@ -15429,8 +15530,9 @@ cm
 af
 tX
 tX
+aa
 "}
-(42,1,1) = {"
+(43,1,1) = {"
 aa
 aa
 tX
@@ -15489,8 +15591,9 @@ rZ
 ag
 tX
 tX
+aa
 "}
-(43,1,1) = {"
+(44,1,1) = {"
 aa
 aa
 tX
@@ -15549,8 +15652,9 @@ jb
 tX
 tX
 tX
+aa
 "}
-(44,1,1) = {"
+(45,1,1) = {"
 aa
 tX
 tX
@@ -15609,8 +15713,9 @@ pK
 tX
 tX
 tX
+aa
 "}
-(45,1,1) = {"
+(46,1,1) = {"
 aa
 tX
 tX
@@ -15669,8 +15774,9 @@ db
 pK
 tX
 tX
+aa
 "}
-(46,1,1) = {"
+(47,1,1) = {"
 aa
 tX
 tX
@@ -15729,8 +15835,9 @@ ag
 jb
 tX
 tX
+aa
 "}
-(47,1,1) = {"
+(48,1,1) = {"
 aa
 tX
 tX
@@ -15789,8 +15896,9 @@ ag
 kp
 Rv
 tX
+aa
 "}
-(48,1,1) = {"
+(49,1,1) = {"
 aa
 tX
 tX
@@ -15849,8 +15957,9 @@ ag
 jb
 pK
 tX
+aa
 "}
-(49,1,1) = {"
+(50,1,1) = {"
 aa
 tX
 tX
@@ -15909,8 +16018,9 @@ ag
 aj
 eC
 tX
+aa
 "}
-(50,1,1) = {"
+(51,1,1) = {"
 aa
 aa
 tX
@@ -15969,8 +16079,9 @@ ag
 hP
 Gg
 tX
+aa
 "}
-(51,1,1) = {"
+(52,1,1) = {"
 aa
 aa
 tX
@@ -16029,8 +16140,9 @@ jb
 kp
 Gg
 tX
+aa
 "}
-(52,1,1) = {"
+(53,1,1) = {"
 aa
 aa
 tX
@@ -16089,8 +16201,9 @@ tI
 Gg
 Gg
 tX
+aa
 "}
-(53,1,1) = {"
+(54,1,1) = {"
 aa
 aa
 tX
@@ -16149,8 +16262,9 @@ pK
 Gg
 tX
 tX
+aa
 "}
-(54,1,1) = {"
+(55,1,1) = {"
 aa
 aa
 tX
@@ -16209,8 +16323,9 @@ Ln
 Gg
 tX
 tX
+aa
 "}
-(55,1,1) = {"
+(56,1,1) = {"
 aa
 aa
 tX
@@ -16269,8 +16384,9 @@ qA
 Gg
 tX
 tX
+aa
 "}
-(56,1,1) = {"
+(57,1,1) = {"
 aa
 tX
 tX
@@ -16329,8 +16445,9 @@ Oi
 Gg
 tX
 aa
+aa
 "}
-(57,1,1) = {"
+(58,1,1) = {"
 aa
 tX
 tX
@@ -16389,8 +16506,9 @@ Gg
 Gg
 tX
 aa
+aa
 "}
-(58,1,1) = {"
+(59,1,1) = {"
 aa
 tX
 tX
@@ -16449,8 +16567,9 @@ Gg
 tX
 tX
 aa
+aa
 "}
-(59,1,1) = {"
+(60,1,1) = {"
 aa
 tX
 tX
@@ -16509,8 +16628,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(60,1,1) = {"
+(61,1,1) = {"
 aa
 tX
 tX
@@ -16569,8 +16689,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(61,1,1) = {"
+(62,1,1) = {"
 aa
 tX
 tX
@@ -16629,8 +16750,9 @@ db
 tX
 tX
 aa
+aa
 "}
-(62,1,1) = {"
+(63,1,1) = {"
 aa
 tX
 tX
@@ -16689,8 +16811,9 @@ jb
 tX
 aa
 aa
+aa
 "}
-(63,1,1) = {"
+(64,1,1) = {"
 aa
 tX
 tX
@@ -16749,8 +16872,9 @@ tX
 tX
 aa
 aa
+aa
 "}
-(64,1,1) = {"
+(65,1,1) = {"
 aa
 tX
 tX
@@ -16809,8 +16933,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(65,1,1) = {"
+(66,1,1) = {"
 aa
 tX
 tX
@@ -16869,8 +16994,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(66,1,1) = {"
+(67,1,1) = {"
 aa
 aa
 tX
@@ -16929,8 +17055,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(67,1,1) = {"
+(68,1,1) = {"
 aa
 aa
 tX
@@ -16989,8 +17116,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(68,1,1) = {"
+(69,1,1) = {"
 aa
 aa
 tX
@@ -17049,8 +17177,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(69,1,1) = {"
+(70,1,1) = {"
 aa
 aa
 tX
@@ -17109,8 +17238,9 @@ tX
 tX
 tX
 tX
+aa
 "}
-(70,1,1) = {"
+(71,1,1) = {"
 aa
 aa
 aa
@@ -17169,8 +17299,9 @@ tX
 tX
 tX
 tX
+aa
 "}
-(71,1,1) = {"
+(72,1,1) = {"
 aa
 aa
 aa
@@ -17229,8 +17360,9 @@ tX
 tX
 tX
 tX
+aa
 "}
-(72,1,1) = {"
+(73,1,1) = {"
 aa
 aa
 aa
@@ -17289,8 +17421,9 @@ tX
 tX
 tX
 tX
+aa
 "}
-(73,1,1) = {"
+(74,1,1) = {"
 aa
 aa
 aa
@@ -17349,8 +17482,9 @@ tX
 tX
 tX
 tX
+aa
 "}
-(74,1,1) = {"
+(75,1,1) = {"
 aa
 aa
 aa
@@ -17409,8 +17543,9 @@ tX
 tX
 tX
 tX
+aa
 "}
-(75,1,1) = {"
+(76,1,1) = {"
 aa
 aa
 aa
@@ -17469,8 +17604,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(76,1,1) = {"
+(77,1,1) = {"
 aa
 aa
 aa
@@ -17529,8 +17665,9 @@ tX
 tX
 tX
 aa
+aa
 "}
-(77,1,1) = {"
+(78,1,1) = {"
 aa
 aa
 aa
@@ -17589,8 +17726,9 @@ tX
 tX
 aa
 aa
+aa
 "}
-(78,1,1) = {"
+(79,1,1) = {"
 aa
 aa
 aa
@@ -17649,8 +17787,9 @@ tX
 tX
 aa
 aa
+aa
 "}
-(79,1,1) = {"
+(80,1,1) = {"
 aa
 aa
 aa
@@ -17709,8 +17848,9 @@ tX
 aa
 aa
 aa
+aa
 "}
-(80,1,1) = {"
+(81,1,1) = {"
 aa
 aa
 aa
@@ -17764,6 +17904,68 @@ tX
 tX
 tX
 tX
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(82,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa

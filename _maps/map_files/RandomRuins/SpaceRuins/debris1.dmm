@@ -1,7 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"a" = (
-/turf/template_noop,
-/area/template_noop)
 "b" = (
 /obj/structure/disposalpipe/segment,
 /turf/space,
@@ -13,10 +10,6 @@
 	},
 /turf/space,
 /area/space)
-"d" = (
-/obj/structure/lattice,
-/turf/space,
-/area/template_noop)
 "e" = (
 /obj/structure/grille/broken,
 /turf/space,
@@ -50,9 +43,6 @@
 /obj/structure/girder/displaced,
 /turf/space,
 /area/space)
-"r" = (
-/turf/space,
-/area/template_noop)
 "t" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -165,52 +155,52 @@
 /area/space)
 
 (1,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
 "}
 (2,1,1) = {"
-a
-a
-r
-r
-r
-r
-r
-r
-r
-r
-r
-d
-d
-d
-r
-r
-d
-r
-a
-a
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+v
+v
+v
+X
+X
+v
+X
+X
+X
 "}
 (3,1,1) = {"
-a
-d
+X
+v
 v
 X
 X
@@ -227,12 +217,12 @@ X
 X
 X
 X
-r
-a
+X
+X
 "}
 (4,1,1) = {"
-a
-d
+X
+v
 X
 X
 X
@@ -249,12 +239,12 @@ v
 Z
 X
 X
-d
-a
+v
+X
 "}
 (5,1,1) = {"
-a
-r
+X
+X
 X
 g
 y
@@ -271,12 +261,12 @@ v
 X
 X
 X
-r
-a
+X
+X
 "}
 (6,1,1) = {"
-a
-r
+X
+X
 J
 x
 C
@@ -293,12 +283,12 @@ X
 X
 F
 X
-r
-a
+X
+X
 "}
 (7,1,1) = {"
-a
-r
+X
+X
 X
 X
 y
@@ -315,12 +305,12 @@ F
 X
 v
 X
-r
-a
+X
+X
 "}
 (8,1,1) = {"
-a
-r
+X
+X
 X
 X
 X
@@ -337,12 +327,12 @@ X
 E
 X
 X
-r
-a
+X
+X
 "}
 (9,1,1) = {"
-a
-r
+X
+X
 X
 v
 X
@@ -353,18 +343,18 @@ Z
 l
 X
 E
-a
+X
 X
 X
 V
 X
 X
-r
-a
+X
+X
 "}
 (10,1,1) = {"
-a
-r
+X
+X
 X
 Z
 Q
@@ -381,12 +371,12 @@ E
 X
 X
 X
-r
-a
+X
+X
 "}
 (11,1,1) = {"
-a
-r
+X
+X
 X
 X
 I
@@ -403,12 +393,12 @@ F
 E
 Z
 X
-d
-a
+v
+X
 "}
 (12,1,1) = {"
-a
-r
+X
+X
 X
 X
 X
@@ -425,12 +415,12 @@ e
 X
 X
 X
-r
-a
+X
+X
 "}
 (13,1,1) = {"
-a
-r
+X
+X
 X
 X
 X
@@ -447,12 +437,12 @@ X
 X
 e
 Z
-r
-a
+X
+X
 "}
 (14,1,1) = {"
-a
-r
+X
+X
 X
 X
 X
@@ -469,12 +459,12 @@ v
 o
 X
 X
-r
-a
+X
+X
 "}
 (15,1,1) = {"
-a
-r
+X
+X
 X
 E
 X
@@ -491,12 +481,12 @@ X
 X
 X
 X
-d
-a
+v
+X
 "}
 (16,1,1) = {"
-a
-r
+X
+X
 X
 X
 E
@@ -513,12 +503,12 @@ X
 X
 Z
 X
-d
-a
+v
+X
 "}
 (17,1,1) = {"
-a
-r
+X
+X
 X
 X
 X
@@ -535,12 +525,12 @@ p
 X
 X
 X
-r
-a
+X
+X
 "}
 (18,1,1) = {"
-a
-r
+X
+X
 X
 X
 X
@@ -557,50 +547,50 @@ X
 X
 X
 X
-r
-a
+X
+X
 "}
 (19,1,1) = {"
-a
-a
-r
-r
-r
-r
-d
-r
-d
-r
-r
-r
-r
-r
-r
-r
-r
-r
-a
-a
+X
+X
+X
+X
+X
+X
+v
+X
+v
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
 "}
 (20,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
 "}
