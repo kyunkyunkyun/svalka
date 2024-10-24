@@ -3,7 +3,6 @@
 	cost = 1 // round() of your ruin's square divided by 1000 (tiles basically). Default is 1. 0 is used for ruins with `always_place = TRUE`
 	// cost = max(round(square, 1000)/1000, 1)
 	// 100x100 ruin costs 10, 70x70 ruin costs 5, 50x50 costs 3 etc
-	placement_weight = 1 // values from 1 to 2. 2 for major ruins with high-value loot, 1 for the rest. Default is 1
 	ci_exclude = /datum/map_template/ruin/space
 
 /datum/map_template/ruin/space/zoo
@@ -61,7 +60,6 @@
 		evidence of construction, hook it covertly into the \
 		telecommunications network and hope for the best."
 	cost = 6
-	placement_weight = 2 // dvorak+mo19 experience + mini boss
 	allow_duplicates = FALSE // this shouldn't be spawning more than once anymore
 
 /datum/map_template/ruin/space/derelict1
@@ -208,7 +206,6 @@
 	name = "D.V.O.R.A.K'S Telecommunications Satellite"
 	description = "Seems the telecomunication satellite that went dark 4 years ago finally re-appeared on scanners? Strange signals are coming from it."
 	cost = 8 // Huge. Large. In charge
-	placement_weight = 2 // In charge indeed
 	allow_duplicates = FALSE // One sadistic malfunctioning AI is enough. Also unique apcs.
 
 /datum/map_template/ruin/space/clownmime
@@ -257,7 +254,6 @@
 	name = "USSP"
 	description = "A decript station of seemingly Soviet origin. The last contact had with this station was a distress signal, and the rest was dark."
 	cost = 8 // This ruin is 100x100 tiles, so we dont want it to be treated like a 10x10 meteor
-	placement_weight = 2 // 2 mosins, 3 syndie evas, 1 taser, 2 batons, 1 double-barrel, 1 kitty
 	allow_duplicates = FALSE // One of these has enough loot
 
 /datum/map_template/ruin/space/whiteship
@@ -327,7 +323,6 @@
 	name = "Moon Outpost 19"
 	description = "A now-defunct outpost, with the last received signal being that of distress."
 	cost = 5
-	placement_weight = 2 // A113, void/mech/anomalycore, research notes
 	allow_duplicates = FALSE
 
 /datum/map_template/ruin/space/voyager
