@@ -38,7 +38,8 @@
 		/obj/item/bio_chip/dust,
 		/obj/item/bio_chip/freedom,
 		/obj/item/bio_chip/adrenalin,
-		/obj/item/bio_chip/mindshield/syndicate
+		/obj/item/bio_chip/mindshield/syndicate,
+		/obj/item/bio_chip/uplink/admin,
 	)
 
 	cybernetic_implants = list(
@@ -51,9 +52,6 @@
 	if(visualsOnly)
 		return
 
-	var/obj/item/bio_chip/uplink/admin/U = new /obj/item/bio_chip/uplink/admin(H)
-	U.implant(H)
-	U.hidden_uplink.uses = 2500
 	H.faction += "syndicate"
 
 /datum/outfit/job/syndicateofficer/on_mind_initialize(mob/living/carbon/human/H)

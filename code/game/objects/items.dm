@@ -97,8 +97,6 @@ GLOBAL_DATUM_INIT(welding_sparks, /mutable_appearance, mutable_appearance('icons
 	var/armor_penetration_percentage = 0
 	/// For what suits can store. IE. secuirty vest holding stunbatons, disablers, cuffs.
 	var/list/allowed = list()
-	/// All items can have an uplink hidden inside, just remember to add the triggers.
-	var/obj/item/uplink/hidden/hidden_uplink
 
 	/// Used by security bots to determine if this item is safe for public use.
 	var/needs_permit = FALSE
@@ -236,7 +234,6 @@ GLOBAL_DATUM_INIT(welding_sparks, /mutable_appearance, mutable_appearance('icons
 
 /obj/item/Destroy()
 	flags &= ~DROPDEL	//prevent reqdels
-	QDEL_NULL(hidden_uplink)
 	if(ismob(loc))
 		var/mob/m = loc
 		m.unequip(src, force = TRUE)

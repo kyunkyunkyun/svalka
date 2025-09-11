@@ -60,25 +60,9 @@
 
 	// No. of player - Min. Player to dec, divided by player per bonus, then multipled by TC per bonus. Rounded.
 	total_tc = CHALLENGE_TELECRYSTALS + round(((length(get_living_players(exclude_nonhuman = FALSE, exclude_offstation = TRUE)) - CHALLENGE_MIN_PLAYERS)/CHALLENGE_SCALE_PLAYER) * CHALLENGE_SCALE_BONUS)
-	share_telecrystals()
+	share_telecrystals(total_tc)
 	SSshuttle.refuel_delay = CHALLENGE_SHUTTLE_DELAY
 	qdel(src)
-
-/obj/item/nuclear_challenge/proc/share_telecrystals()
-	var/player_tc
-	var/remainder
-
-	player_tc = round(total_tc / length(GLOB.nuclear_uplink_list)) //round to get an integer and not floating point
-	remainder = total_tc % length(GLOB.nuclear_uplink_list)
-
-	for(var/obj/item/radio/uplink/nuclear/U in GLOB.nuclear_uplink_list)
-		U.hidden_uplink.uses += player_tc
-	while(remainder > 0)
-		for(var/obj/item/radio/uplink/nuclear/U in GLOB.nuclear_uplink_list)
-			if(remainder <= 0)
-				break
-			U.hidden_uplink.uses++
-			remainder--
 
 /obj/item/nuclear_challenge/proc/check_allowed(mob/living/user)
 	if(declaring_war)

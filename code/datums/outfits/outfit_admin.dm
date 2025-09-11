@@ -49,7 +49,6 @@
 
 	var/id_icon = "syndie"
 	var/id_access = "Syndicate Operative"
-	var/uplink_uses = 100
 
 /datum/outfit/admin/syndicate/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
@@ -59,11 +58,6 @@
 	var/obj/item/card/id/I = H.wear_id
 	if(istype(I))
 		apply_to_card(I, H, get_syndicate_access(id_access), name, id_icon)
-
-	var/obj/item/radio/uplink/U = H.r_store
-	if(istype(U))
-		U.hidden_uplink.uplink_owner = "[H.key]"
-		U.hidden_uplink.uses = uplink_uses
 
 	var/obj/item/radio/R = H.l_ear
 	if(istype(R))
@@ -127,7 +121,6 @@
 	name = "Syndicate Spy"
 	uniform = /obj/item/clothing/under/suit/really_black
 	shoes = /obj/item/clothing/shoes/chameleon/noslip
-	uplink_uses = 200
 	id_access = "Syndicate Agent"
 
 	bio_chips = list(

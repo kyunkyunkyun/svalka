@@ -553,8 +553,9 @@
 	victim_belongings = list()
 
 	// Clean up
-	var/obj/item/bio_chip/uplink/uplink_implant = locate() in M
-	uplink_implant?.hidden_uplink?.is_jammed = FALSE
+	var/obj/item/bio_chip/uplink/uplink_biochip = locate() in M
+	var/datum/component/uplink/uplink = uplink_biochip?.GetComponent(/datum/component/uplink)
+	uplink.flags &= ~UPLINK_JAMMED
 
 	QDEL_LIST_CONTENTS(temp_objs)
 

@@ -133,7 +133,7 @@
 		update_synd_icons_added(synd_mind)
 
 	scale_telecrystals()
-	share_telecrystals()
+	share_telecrystals(total_tc)
 
 	return ..()
 
@@ -144,21 +144,23 @@
 
 	total_tc += danger * NUKESCALINGMODIFIER
 
-/datum/game_mode/nuclear/proc/share_telecrystals()
-	var/player_tc
-	var/remainder
+/proc/share_telecrystals(total_tc)
+	var/list/datum/component/uplink/nukie_uplinks = GLOB.nuclear_uplink_list
+	var/nukie_uplinks_amount = length(nukie_uplinks)
+	var/player_tc = round(total_tc / nukie_uplinks_amount) // round to get an integer and not floating point
+	var/remainder = total_tc % nukie_uplinks_amount
 
-	player_tc = round(total_tc / length(GLOB.nuclear_uplink_list)) //round to get an integer and not floating point
-	remainder = total_tc % length(GLOB.nuclear_uplink_list)
+	for(var/datum/component/uplink/uplink in nukie_uplinks)
+		uplink.telecrystals += player_tc
 
-	for(var/obj/item/radio/uplink/nuclear/U in GLOB.nuclear_uplink_list)
-		U.hidden_uplink.uses += player_tc
-	while(remainder > 0)
-		for(var/obj/item/radio/uplink/nuclear/U in GLOB.nuclear_uplink_list)
-			if(remainder <= 0)
-				break
-			U.hidden_uplink.uses++
-			remainder--
+	if(!remainder)
+		return
+
+	for(var/datum/component/uplink/uplink in nukie_uplinks)
+		if(!remainder)
+			break
+		uplink.telecrystals++
+		remainder--
 
 /datum/game_mode/proc/create_syndicate(datum/mind/synd_mind, obj/machinery/nuclearbomb/syndicate/the_bomb) // So we don't have inferior species as ops - randomize a human
 	var/mob/living/carbon/human/M = synd_mind.current
@@ -283,10 +285,7 @@
 	synd_mob.equip_to_slot_or_del(new /obj/item/gun/projectile/automatic/pistol(synd_mob), ITEM_SLOT_BELT)
 	synd_mob.equip_to_slot_or_del(new /obj/item/storage/box/survival_syndie(synd_mob.back), ITEM_SLOT_IN_BACKPACK)
 	synd_mob.equip_to_slot_or_del(new /obj/item/pinpointer/nukeop(synd_mob), ITEM_SLOT_PDA)
-	var/obj/item/radio/uplink/nuclear/U = new /obj/item/radio/uplink/nuclear(synd_mob)
-	U.hidden_uplink.uplink_owner="[synd_mob.key]"
-	U.hidden_uplink.uses = uplink_uses
-	synd_mob.equip_to_slot_or_del(U, ITEM_SLOT_IN_BACKPACK)
+	synd_mob.equip_to_slot_or_del(new /obj/item/radio/uplink/nuclear(synd_mob, synd_mob.key, uplink_uses), ITEM_SLOT_IN_BACKPACK)
 	synd_mob.mind.offstation_role = TRUE
 
 	if(synd_mob.dna.species)
@@ -391,7 +390,7 @@
 	if(length(syndicates) || GAMEMODE_IS_NUCLEAR)
 		var/list/text = list("<br><FONT size=3><B>The syndicate operatives were:</B></FONT>")
 
-		var/purchases = ""
+		var/purchases
 		var/TC_uses = 0
 
 		for(var/datum/mind/syndicate in syndicates)
@@ -407,10 +406,10 @@
 			else
 				text += "body destroyed"
 			text += ")"
-			for(var/obj/item/uplink/H in GLOB.world_uplinks)
-				if(H && H.uplink_owner && H.uplink_owner==syndicate.key)
-					TC_uses += H.used_TC
-					purchases += H.purchase_log
+			for(var/datum/component/uplink/uplink as anything in GLOB.uplinks)
+				if(uplink.owner == syndicate.key)
+					TC_uses += uplink.telecrystals_spent
+					purchases += uplink.purchase_log
 
 		text += "<br>"
 

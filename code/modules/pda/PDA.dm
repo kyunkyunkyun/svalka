@@ -18,6 +18,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, RAD = 0, FIRE = 100, ACID = 100)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	origin_tech = "programming=2"
+	new_attack_chain = TRUE
 
 	//Main variables
 	var/owner = null
@@ -111,8 +112,8 @@ GLOBAL_LIST_EMPTY(PDAs)
 	if((!is_screen_atom(over_object)) && can_use())
 		return attack_self__legacy__attackchain(M)
 
-/obj/item/pda/attack_self__legacy__attackchain(mob/user as mob)
-	if(active_uplink_check(user))
+/obj/item/pda/activate_self(mob/user)
+	if(..())
 		return
 	ui_interact(user)
 
@@ -339,13 +340,15 @@ GLOBAL_LIST_EMPTY(PDAs)
 	held_pen = null
 	update_icon(UPDATE_OVERLAYS)
 
-/obj/item/pda/attack__legacy__attackchain(mob/living/C as mob, mob/living/user as mob)
-	if(iscarbon(C) && scanmode)
-		scanmode.scan_mob(C, user)
+/obj/item/pda/interact_with_atom(atom/target, mob/living/user, list/modifiers)
+	if(iscarbon(target) && scanmode)
+		scanmode.scan_mob(target, user)
+		return ITEM_INTERACT_COMPLETE
 
-/obj/item/pda/afterattack__legacy__attackchain(atom/A as mob|obj|turf|area, mob/user as mob, proximity)
-	if(proximity && scanmode)
-		scanmode.scan_atom(A, user)
+/obj/item/pda/after_attack(atom/target, mob/user, proximity_flag, click_parameters)
+	. = ..()
+	if(proximity_flag && scanmode)
+		scanmode.scan_atom(target, user)
 
 /obj/item/pda/proc/explode() //This needs tuning.
 	if(!detonate)
@@ -406,7 +409,8 @@ GLOBAL_LIST_EMPTY(PDAs)
 	if(!new_tone)
 		return FALSE
 
-	if(hidden_uplink && hidden_uplink.check_trigger(user, lowertext(new_tone), lowertext(lock_code)))
+	var/datum/component/uplink/uplink = GetComponent(/datum/component/uplink)
+	if(uplink?.check_trigger(user, lowertext(new_tone), lowertext(lock_code)))
 		to_chat(user, "The PDA softly beeps.")
 		close(user)
 		return TRUE

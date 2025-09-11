@@ -32,11 +32,6 @@ GLOBAL_DATUM(prisoner_belongings, /obj/structure/closet/secure_closet/contractor
 GLOBAL_LIST(contractors)
 
 /**
- * Traitors
- */
-#define UPLINK_SPECIAL_SPAWNING "ONE PINK CHAINSAW PLEASE"
-
-/**
  * Changelings
  */
 // Defines below to be used with the changeling action's `power_type` var.

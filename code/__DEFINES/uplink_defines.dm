@@ -1,0 +1,33 @@
+// Uplink type flags
+#define UPLINK_TYPE_TRAITOR	(1<<0)
+#define UPLINK_TYPE_NUCLEAR	(1<<1)
+#define UPLINK_TYPE_SST		(1<<2)
+#define UPLINK_TYPE_SIT		(1<<3)
+#define UPLINK_TYPE_ADMIN	(1<<4)
+
+#define UPLINK_LOCKABLE		(1<<0)
+#define UPLINK_LOCKED		(1<<1)
+#define UPLINK_ACTIVE		(1<<2)
+#define UPLINK_JAMMED		(1<<3)
+#define UPLINK_INITIALIZED	(1<<4)
+#define UPLINK_BIOCHIP		(1<<5)
+
+#define UPLINK_FLAGS_DEFAULT (UPLINK_LOCKABLE | UPLINK_LOCKED)
+#define UPLINK_FLAGS_ALWAYS_ACTIVE (UPLINK_LOCKED | UPLINK_ACTIVE)
+#define UPLINK_FLAGS_BIOCHIP (UPLINK_ACTIVE | UPLINK_BIOCHIP)
+
+#define UPLINK_ITEM_DISCOUNTABLE
+
+#define UPLINK_ITEM_STOCK_INFINITE -1
+#define UPLINK_ITEM_STOCK_DISCOUNT 1
+
+#define TC_AMOUNT_DEFAULT 100
+#define TC_AMOUNT_BIO_CHIP 50
+#define TC_AMOUNT_ADMIN 2500
+
+#define UPLINK_SPECIAL_SPAWNING "ONE PINK CHAINSAW PLEASE"
+
+/// Sent to uplink's parent: (new_key)
+#define COMSIG_UPLINK_SET_OWNER "uplink_set_owner"
+/// Sent to uplink's parent: (mob/user)
+#define COMSIG_UPLINK_TRIGGER "uplink_trigger"

@@ -191,9 +191,6 @@ GLOBAL_LIST_EMPTY(deadsay_radio_systems)
 				tune = tune * 10
 			else
 				. = FALSE
-			if(hidden_uplink)
-				if(hidden_uplink.check_trigger(usr, frequency, traitor_frequency))
-					usr << browse(null, "window=radio")
 			if(.)
 				set_frequency(sanitize_frequency(tune, freerange))
 		if("ichannel") // Change primary frequency to an internal channel authorized by access, for non-headset radios only

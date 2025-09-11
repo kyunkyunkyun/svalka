@@ -534,16 +534,13 @@
 	if(ishuman(current) && ((has_antag_datum(/datum/antagonist/traitor)) || \
 		(src in SSticker.mode.syndicates)))
 		. = "Uplink: <a href='byond://?src=[UID()];common=uplink'>give</a>"
-		var/obj/item/uplink/hidden/suplink = find_syndicate_uplink()
-		var/crystals
-		if(suplink)
-			crystals = suplink.uses
-		if(suplink)
+		var/datum/component/uplink/uplink = find_syndicate_uplink()
+		if(uplink)
 			. += "|<a href='byond://?src=[UID()];common=takeuplink'>take</a>"
 			if(usr.client.holder.rights & (R_SERVER|R_EVENT))
-				. += ", <a href='byond://?src=[UID()];common=crystals'>[crystals]</a> crystals"
+				. += ", <a href='byond://?src=[UID()];common=crystals'>[uplink.telecrystals]</a> crystals"
 			else
-				. += ", [crystals] crystals"
+				. += ", [uplink.telecrystals] crystals"
 		. += "." //hiel grammar
 		//         ^ whoever left this comment is literally a grammar nazi. stalin better. in russia grammar correct you.
 
@@ -1549,17 +1546,17 @@
 				log_admin("[key_name(usr)] has taken [key_name(current)]'s uplink")
 				message_admins("[key_name_admin(usr)] has taken [key_name_admin(current)]'s uplink")
 			if("crystals")
-				if(usr.client.holder.rights & (R_SERVER|R_EVENT))
-					var/obj/item/uplink/hidden/suplink = find_syndicate_uplink()
-					var/crystals
-					if(suplink)
-						crystals = suplink.uses
-					crystals = input("Amount of telecrystals for [key]","Syndicate uplink", crystals) as null|num
-					if(!isnull(crystals))
-						if(suplink)
-							suplink.uses = crystals
-							log_admin("[key_name(usr)] has set [key_name(current)]'s telecrystals to [crystals]")
-							message_admins("[key_name_admin(usr)] has set [key_name_admin(current)]'s telecrystals to [crystals]")
+				if(!check_rights(R_SERVER | R_EVENT))
+					return
+
+				var/datum/component/uplink/uplink = find_syndicate_uplink()
+				if(!uplink)
+					return
+				var/new_amount = tgui_input_number(usr, "Amount of telecrystals for [key]", "Syndicate uplink", uplink.telecrystals)
+				if(!isnull(new_amount))
+					uplink.telecrystals = new_amount
+					log_admin("[key_name(usr)] has set [key_name(current)]'s telecrystals to [new_amount]")
+					message_admins("[key_name_admin(usr)] has set [key_name_admin(current)]'s telecrystals to [new_amount]")
 			if("uplink")
 				if(has_antag_datum(/datum/antagonist/traitor))
 					var/datum/antagonist/traitor/T = has_antag_datum(/datum/antagonist/traitor)
@@ -1669,16 +1666,14 @@
 	return text
 
 /datum/mind/proc/find_syndicate_uplink()
-	var/list/L = current.get_contents()
-	for(var/obj/item/I in L)
-		if(I.hidden_uplink)
-			return I.hidden_uplink
-	return null
+	var/list/possible_uplink_holders = current.get_contents()
+	for(var/atom/movable/holder as anything in possible_uplink_holders)
+		. = holder.GetComponent(/datum/component/uplink)
+		if(.)
+			break
 
 /datum/mind/proc/take_uplink()
-	var/obj/item/uplink/hidden/H = find_syndicate_uplink()
-	if(H)
-		qdel(H)
+	qdel(find_syndicate_uplink())
 
 /datum/mind/proc/make_Traitor()
 	if(!has_antag_datum(/datum/antagonist/traitor))

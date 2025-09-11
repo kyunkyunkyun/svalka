@@ -65,24 +65,9 @@ RESTRICT_TYPE(/datum/antagonist/traitor)
 		slaved.leave_serv_hud(owner)
 		owner.som = null
 
-	// Try removing their uplink, check PDA
-	var/mob/M = owner.current
-	var/obj/item/uplink_holder = locate(/obj/item/pda) in M.contents
-
-	// No PDA or it has no uplink? Check headset
-	if(!uplink_holder || !uplink_holder.hidden_uplink)
-		uplink_holder = locate(/obj/item/radio) in M.contents
-
-	// If the headset has an uplink, delete it
-	if(uplink_holder && uplink_holder.hidden_uplink)
-		var/uplink = locate(/obj/item/uplink/hidden) in uplink_holder.contents
-		uplink_holder.hidden_uplink = null
-		qdel(uplink)
-
-	// Check for an uplink implant
-	var/uplink_implant = locate(/obj/item/bio_chip/uplink) in M.contents
-	if(uplink_implant)
-		qdel(uplink_implant)
+	for(var/datum/component/uplink/uplink as anything in GLOB.uplinks)
+		if(uplink.owner == owner.key)
+			qdel(uplink)
 
 	return ..()
 
@@ -245,9 +230,6 @@ RESTRICT_TYPE(/datum/antagonist/traitor)
 				freq += 1
 		freq = pick(freqlist)
 
-		var/obj/item/uplink/hidden/T = new(R)
-		target_radio.hidden_uplink = T
-		T.uplink_owner = "[traitor_mob.key]"
 		target_radio.traitor_frequency = freq
 		to_chat(traitor_mob, "<span class='notice'>The Syndicate have cunningly disguised a Syndicate Uplink as your [R.name]. Simply dial the frequency [format_frequency(freq)] to unlock its hidden features.</span>")
 		antag_memory += "<B>Radio Freq:</B> [format_frequency(freq)] ([R.name])."
@@ -255,14 +237,10 @@ RESTRICT_TYPE(/datum/antagonist/traitor)
 
 	else if(istype(R, /obj/item/pda))
 		// generate a passcode if the uplink is hidden in a PDA
-		var/pda_pass = "[rand(100,999)] [pick("Alpha","Bravo","Delta","Omega")]"
-
-		var/obj/item/uplink/hidden/T = new(R)
-		R.hidden_uplink = T
-		T.uplink_owner = "[traitor_mob.key]"
+		var/pda_pass = "[rand(100, 999)] [pick("Alpha","Bravo","Delta","Omega")]"
+		R.AddComponent(/datum/component/uplink, owner.key)
 		var/obj/item/pda/P = R
 		P.lock_code = pda_pass
-
 		to_chat(traitor_mob, "<span class='notice'>The Syndicate have cunningly disguised a Syndicate Uplink as your [R.name]. Simply enter the code \"[pda_pass]\" into the ringtone select to unlock its hidden features.</span>")
 		antag_memory += "<B>Uplink Passcode:</B> [pda_pass] ([R.name]."
 		return TRUE

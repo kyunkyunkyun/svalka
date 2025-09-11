@@ -482,7 +482,7 @@
 	surplus = 0 // This being refundable makes this a big no no in my mind.
 	uses_special_spawn = TRUE
 
-/datum/uplink_item/dangerous/guardian/spawn_item(turf/loc, obj/item/uplink/U)
+/datum/uplink_item/dangerous/guardian/spawn_item(turf/loc, datum/component/uplink/uplink)
 	if(..() != UPLINK_SPECIAL_SPAWNING)
 		return FALSE
 
@@ -671,7 +671,7 @@
 	item = /obj/item/storage/box/syndie_kit/contractor
 	excludefrom = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
 
-/datum/uplink_item/bundles_tc/contractor/spawn_item(turf/loc, obj/item/uplink/U)
+/datum/uplink_item/bundles_tc/contractor/spawn_item(turf/loc, datum/component/uplink/uplink)
 	var/datum/mind/mind = usr.mind
 	var/datum/antagonist/traitor/AT = mind.has_antag_datum(/datum/antagonist/traitor)
 	if(LAZYACCESS(GLOB.contractors, mind))
@@ -713,11 +713,11 @@
 	var/crate_value = 250
 	uses_special_spawn = TRUE
 
-/datum/uplink_item/bundles_tc/surplus_crate/spawn_item(turf/loc, obj/item/uplink/U, mob/user)
+/datum/uplink_item/bundles_tc/surplus_crate/spawn_item(turf/loc, datum/component/uplink/uplink, mob/user)
 	if(..() != UPLINK_SPECIAL_SPAWNING)
 		return FALSE
 
-	new /obj/structure/closet/crate/surplus(loc, U, crate_value, cost, user)
+	new /obj/structure/closet/crate/surplus(loc, uplink, crate_value, cost, user)
 
 // -----------------------------------
 // PRICES OVERRIDEN FOR NUCLEAR AGENTS

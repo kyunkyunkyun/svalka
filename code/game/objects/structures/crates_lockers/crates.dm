@@ -650,9 +650,9 @@
 
 /obj/structure/closet/crate/surplus
 
-/obj/structure/closet/crate/surplus/Initialize(mapload, obj/item/uplink/U, crate_value, cost, mob/user)
+/obj/structure/closet/crate/surplus/Initialize(mapload, datum/component/uplink/uplink, crate_value, cost, mob/user)
 	. = ..()
-	var/list/temp_uplink_list = get_uplink_items(U, user)
+	var/list/temp_uplink_list = get_uplink_items(uplink, user)
 	var/list/buyable_items = list()
 	for(var/category in temp_uplink_list)
 		buyable_items += temp_uplink_list[category]
@@ -700,11 +700,11 @@
 		itemlog += uplink_item.name // To make the name more readable for the log compared to just uplink_item.item
 		danger_counter = 0
 
-	U.purchase_log += "<BIG>[bicon(src)]</BIG>"
+	uplink.purchase_log += "<BIG>[bicon(src)]</BIG>"
 	bought_items += /obj/item/storage/bag/garment/syndie // Guaranteed to spawn with drip (doesn't affect balance, it's only a bunch of fancy clothing)
 	for(var/item in bought_items)
 		var/obj/purchased = new item(src)
-		U.purchase_log += "<BIG>[bicon(purchased)]</BIG>"
+		uplink.purchase_log += "<BIG>[bicon(purchased)]</BIG>"
 		itemlog += purchased.name // To make the item more readable for the log compared to just uplink_item.item
 	var/item_list = jointext(sortList(itemlog), ", ")
 	log_game("[key_name(user)] purchased a surplus crate with [item_list]")

@@ -2,32 +2,30 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 // This define is used when we have to spawn in an uplink item in a weird way, like a Surplus crate spawning an actual crate.
 // Use this define by setting `uses_special_spawn` to TRUE on the item, and then checking if the parent proc of `spawn_item` returns this define. If it does, implement your special spawn after that.
 
-/proc/get_uplink_items(obj/item/uplink/U, mob/user)
+/proc/get_uplink_items(datum/component/uplink/uplink, mob/user)
 	var/list/uplink_items = list()
 	var/list/sales_items = list()
-	var/newreference = 1
-	if(!length(uplink_items))
-		for(var/path in GLOB.uplink_items)
-			var/datum/uplink_item/I = new path
-			if(!I.item)
-				continue
-			if(length(I.uplinktypes) && !(U.uplink_type in I.uplinktypes) && U.uplink_type != UPLINK_TYPE_ADMIN)
-				continue
-			if(length(I.excludefrom) && (U.uplink_type in I.excludefrom))
-				continue
-			//Add items to discount pool, checking job, species, and hijacker status
-			if(I.job && !(user.mind.assigned_role in I.job)) //If your job does not match, no discount
-				continue
-			if(I.species && !(user.dna?.species.name in I.species)) //If your species does not match, no discount
-				continue
+	for(var/path in GLOB.uplink_items)
+		var/datum/uplink_item/item = new path
+		if(!item.item)
+			continue
+		if(uplink.uplink_type != UPLINK_TYPE_ADMIN && length(item.uplinktypes) && !(uplink.uplink_type in item.uplinktypes))
+			continue
+		if(length(item.excludefrom) && (uplink.uplink_type in item.excludefrom))
+			continue
+		//Add items to discount pool, checking job, species, and hijacker status
+		if(item.job && !(user.mind.assigned_role in item.job)) //If your job does not match, no discount
+			continue
+		if(item.species && !(user.dna?.species.name in item.species)) //If your species does not match, no discount
+			continue
 
-			if(!uplink_items[I.category])
-				uplink_items[I.category] = list()
+		if(!uplink_items[item.category])
+			uplink_items[item.category] = list()
 
-			uplink_items[I.category] += I
+		uplink_items[item.category] += item
 
-			if(I.limited_stock < 0 && I.can_discount && I.item && I.cost > 5 && !I.hijack_only)
-				sales_items += I
+		if(item.stock == UPLINK_ITEM_STOCK_INFINITE && item.can_discount && item.item && item.cost > 5 && !item.hijack_only)
+			sales_items += item
 
 	if(isnull(user)) //Handles surplus
 		return uplink_items
@@ -36,7 +34,8 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 		var/datum/uplink_item/sale_item = pick_n_take(sales_items)
 		var/datum/uplink_item/A = new sale_item.type
 		var/discount = 0.5
-		A.limited_stock = 1
+		var/newreference = 1
+		A.stock = UPLINK_ITEM_STOCK_DISCOUNT
 		sale_item.refundable = FALSE
 		A.refundable = FALSE
 		if(A.cost >= 100)
@@ -45,7 +44,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 		A.category = "Discounted Gear"
 		A.name += " ([round(((initial(A.cost) - A.cost) / initial(A.cost)) * 100)]% off!)"
 		A.reference = "DIS[newreference]"
-		A.desc += " Limit of [A.limited_stock] per uplink. Normally costs [initial(A.cost)] TC."
+		A.desc += " Limit of [A.stock] per uplink. Normally costs [initial(A.cost)] TC."
 		A.surplus = 0 //No freebies
 		A.item = sale_item.item
 		newreference++
@@ -65,54 +64,52 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	var/category = "item category"
 	/// Description of the item in the uplink
 	var/desc = "Item Description."
+	var/flags = NONE
 	/// Used for discounts. Any unique string will do.
 	var/reference
 	/// What is spawned when we purchase this?
 	var/item
 	/// How many TC does this cost?
 	var/cost = 0
-	/// Is what we're spawning abstract?
-	var/abstract = 0
 	/// Empty list means it is in all the uplink types. Otherwise place the uplink type here.
 	var/list/uplinktypes = list()
 	/// Empty list does nothing. Place the name of uplink type you don't want this item to be available in here.
 	var/list/excludefrom = list()
-	/// Is this job locked?
-	var/list/job = null
-	/// This makes an item on the uplink only show up to the specified species
-	var/list/species = null
+	/// This item is limited to people with this job. If not set, it's available to everyone
+	var/list/job
+	/// This makes an item on the uplink only show up to the specified species. If not set, it's available to everyone
+	var/list/species
 	/// Chance of being included in the surplus crate (when pick() selects it)
 	var/surplus = 100
 	/// Can this be sold at a discount?
-	var/can_discount = TRUE
+	var/can_discount = TRUE // flag
 	/// Can you only buy so many? -1 allows for infinite purchases
-	var/limited_stock = -1
+	var/stock = -1
 	/// Can this item be purchased only during hijackings? Hijack-only items are by default unable to be on sale.
-	var/hijack_only = FALSE
+	var/hijack_only = FALSE // flag
 	/// Can you refund this in the uplink?
-	var/refundable = FALSE
+	var/refundable = FALSE // flag
 	/// Alternative path for refunds, in case the item purchased isn't what is actually refunded (ie: holoparasites).
-	var/refund_path = null
+	var/refund_path
 	/// specified refund amount in case there needs to be a TC penalty for refunds.
 	var/refund_amount
 	/// Our special little snowflakes that have to be spawned in a different way than normal, like a surplus crate spawning a crate or contractor kits
-	var/uses_special_spawn = FALSE
+	var/uses_special_spawn = FALSE // flag
 
-/datum/uplink_item/proc/spawn_item(turf/loc, obj/item/uplink/U)
+/datum/uplink_item/proc/spawn_item(turf/loc, datum/component/uplink/uplink, mob/user)
+	if(item)
+		return new item(loc)
 
 	if(hijack_only && !(usr.mind.special_role == SPECIAL_ROLE_NUKEOPS))//nukies get items that regular traitors only get with hijack. If a hijack-only item is not for nukies, then exclude it via the gamemode list.
-		if(!(locate(/datum/objective/hijack) in usr.mind.get_all_objectives()) && U.uplink_type != UPLINK_TYPE_ADMIN)
+		if(uplink.uplink_type != UPLINK_TYPE_ADMIN && !(locate(/datum/objective/hijack) in usr.mind.get_all_objectives()))
 			to_chat(usr, "<span class='warning'>The Syndicate will only issue this extremely dangerous item to agents assigned the Hijack objective.</span>")
 			return
 
-	U.uses -= max(cost, 0)
-	U.used_TC += cost
+	uplink.telecrystals -= max(cost, 0)
+	uplink.telecrystals_spent += cost
 	SSblackbox.record_feedback("nested tally", "traitor_uplink_items_bought", 1, list("[initial(name)]", "[cost]"))
 	if(item && !uses_special_spawn)
 		return new item(loc)
-
-	if(limited_stock)
-		limited_stock -= 1 // In case we are handling discount items differently
 	return UPLINK_SPECIAL_SPAWNING
 
 /datum/uplink_item/proc/description()
@@ -121,50 +118,6 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 		var/obj/temp = src.item
 		desc = replacetext(initial(temp.desc), "\n", "<br>")
 	return desc
-
-/datum/uplink_item/proc/buy_uplink_item(obj/item/uplink/hidden/U, mob/user, put_in_hands = TRUE)
-	if(!istype(U))
-		return
-
-	if(user.stat || user.restrained())
-		return
-
-	if(!ishuman(user))
-		return
-
-	// If the uplink's holder is in the user's contents
-	if(((U.loc in user.contents) || (in_range(U.loc, user) && isturf(U.loc.loc))))
-		if(cost > U.uses)
-			return
-
-
-		var/obj/I = spawn_item(get_turf(user), U, user)
-
-		if(!I || I == UPLINK_SPECIAL_SPAWNING)
-			return // Failed to spawn, or we handled it with special spawning
-		if(limited_stock > 0)
-			limited_stock--
-			log_game("[key_name(user)] purchased [name]. [name] was discounted to [cost].")
-			user.create_log(MISC_LOG, "Uplink purchase: [name] was discounted to [cost]tc")
-			if(!user.mind.special_role)
-				message_admins("[key_name_admin(user)] purchased [name] (discounted to [cost]), as a non antagonist.")
-
-		else
-			log_game("[key_name(user)] purchased [name].")
-			user.create_log(MISC_LOG, "Uplink purchase: [name] for [cost]tc")
-			if(!user.mind.special_role)
-				message_admins("[key_name_admin(user)] purchased [name], as a non antagonist.")
-
-		if(istype(I, /obj/item/storage/box) && length(I.contents))
-			for(var/atom/o in I)
-				U.purchase_log += "<big>[bicon(o)]</big>"
-
-		else
-			U.purchase_log += "<big>[bicon(I)]</big>"
-
-		if(put_in_hands)
-			user.put_in_any_hand_if_possible(I)
-		return I
 
 /*
 //
@@ -622,7 +575,6 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 
 /datum/uplink_item/device_tools
 	category = "Devices and Tools"
-	abstract = 1
 
 /datum/uplink_item/device_tools/emag
 	name = "Cryptographic Sequencer"

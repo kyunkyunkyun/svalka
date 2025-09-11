@@ -89,11 +89,11 @@
 			var/TC_uses = 0
 			var/used_uplink = FALSE
 			var/purchases = ""
-			for(var/obj/item/uplink/H in GLOB.world_uplinks)
-				if(H && H.uplink_owner && H.uplink_owner == traitor.key)
-					TC_uses += H.used_TC
+			for(var/datum/component/uplink/uplink as anything in GLOB.uplinks)
+				if(uplink.owner == traitor.key)
+					TC_uses += uplink.telecrystals_spent
 					used_uplink = TRUE
-					purchases += H.purchase_log
+					purchases += uplink.purchase_log
 
 			if(used_uplink)
 				text += " (used [TC_uses] TC) [purchases]"
