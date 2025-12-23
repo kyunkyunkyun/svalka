@@ -26,9 +26,10 @@ def main():
     all_failures = []
 
     for path in dme.subtypesof("/"):
-        if not str(path.source_loc.file_path).startswith("modular_ss220"):
-            continue
         typepath = dme.type_decl(path)
+
+        if not str(typepath.source_loc.file_path).startswith("modular_ss220"):
+            continue
 
         for variable_name in typepath.var_names(modified=True):
             modded = typepath.var_decl(variable_name, False)
